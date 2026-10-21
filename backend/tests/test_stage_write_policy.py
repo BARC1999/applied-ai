@@ -61,7 +61,7 @@ ROLE_DEAD = "Software Development Engineer – Database 2026 (US)"
 
 def _snippet(role: str, req: str) -> str:
     return (
-        "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We've received your "
+        "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We've received your "
         f"application for the {role} (ID: {req}) position. What happens next?"
     )
 

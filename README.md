@@ -486,7 +486,7 @@ licence, once given, runs with the copy — and the PRIOR VERSIONS section of th
 so in terms. Third-party dependencies keep their own licences, which nothing here alters.
 
 **To license Applied, host it, evaluate it for an institution, or talk about a partnership,
-sponsorship or funding**, contact Ayush Yadav at **[contact information removed]**. Permission is granted
+sponsorship or funding**, contact Ivan Kozlov at **[contact information removed]**. Permission is granted
 only in writing.
 
 **Contributions.** This is not an open-source project and pull requests are not accepted — the

@@ -49,7 +49,7 @@ from jobtracker.cloud import pipeline
 # Synthetic wordings. The repo is public and real mailbox content never lands in
 # a fixture; these reproduce the SHAPE, which is what the extractor sees.
 _EEO_QUOTED = (
-    "Hi Ayush, Thanks for applying! We appreciate your interest. For more "
+    "Hi Ivan, Thanks for applying! We appreciate your interest. For more "
     'information, please refer to the "Equal Employment Opportunity is the '
     'Law" poster.'
 )

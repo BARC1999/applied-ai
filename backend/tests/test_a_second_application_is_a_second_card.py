@@ -14,7 +14,7 @@ Three separate applications, ten days apart, behind one card dated the first.
 The mail gives nothing to tell them apart. Fetched from the mailbox, all three
 bodies are byte-identical:
 
-    Hi Ayush Yadav, Thanks for applying to Google! There are a ton of great
+    Hi Ivan Kozlov, Thanks for applying to Google! There are a ton of great
     companies out there, so we appreciate your interest in joining our team...
 
 No role, no requisition number, no job link. Supabase is the same shape at two.
@@ -56,7 +56,7 @@ USER = uuid.UUID("00000000-0000-0000-0000-0000000000aa")
 
 #: The real body, as the snippet delivers it. Identical for all three.
 GOOGLE_SNIPPET = (
-    "Hi Ayush Yadav, Thanks for applying to Google! There are a ton of great "
+    "Hi Ivan Kozlov, Thanks for applying to Google! There are a ton of great "
     "companies out there, so we appreciate your interest in joining our team. "
     "While we're not able to reach out to every applicant"
 )
@@ -284,7 +284,7 @@ def test_a_requisition_id_still_outranks_everything() -> None:
             category="applied",
             confidence=0.9,
             snippet=(
-                f"Hi Ayush, Thank you for taking the time to submit your application "
+                f"Hi Ivan, Thank you for taking the time to submit your application "
                 f"for {role} (Job number: {number}). We're glad you're interested in a "
                 f"career at Microsoft"
             ),

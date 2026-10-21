@@ -468,7 +468,7 @@ test.describe("app shell — viewport lock (via /demo/shell, executes without a 
    *
    * AT 1024, not 1280, and that is the load-bearing part: the band is
    * `viewport − 288` wide, so this third-of-four cell's own quarter-line puts
-   * a 26rem panel 48px past the band's right edge at exactly the width Ayush
+   * a 26rem panel 48px past the band's right edge at exactly the width Ivan
    * works at. `docHeights` alone cannot see that — an `overflow-hidden`
    * ancestor hides the scroll while the panel is clipped — so the panel's
    * right edge is measured against the band's.

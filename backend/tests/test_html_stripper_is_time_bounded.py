@@ -233,7 +233,7 @@ def test_a_truncated_stylesheet_does_not_reach_the_classifier_as_prose() -> None
     css = "@media only screen and (max-width:620px){.mcnTextContent{padding:9px 18px}} " * 700
     doc = (
         "<html><head><style>" + css + "</style></head><body>"
-        "<p>Hi Ayush,</p><p>Unfortunately, we have decided not to move forward "
+        "<p>Hi Ivan,</p><p>Unfortunately, we have decided not to move forward "
         "with your application at this time.</p></body></html>"
     )
     assert doc.index("</style>") > MAX_HTML_CHARS, (
@@ -332,7 +332,7 @@ def test_an_over_cap_body_it_cannot_read_becomes_empty_and_not_a_stub(
     """
 
     doc = (
-        "<html><body><p>Hi Ayush,</p>"
+        "<html><body><p>Hi Ivan,</p>"
         + OVER_CAP_UNTERMINATED[shape]
         + "<p>You were REJECTEDWORD.</p>"
         + _PAD

@@ -87,7 +87,7 @@ TOKEN = "amazon"
 #: The shape that reaches rule 4: an employer this subject names, and no role
 #: anywhere in it. This is not contrived — it is why the picker exists.
 BLIND_SUBJECT = "Update on your application to Amazon"
-BLIND_BODY = "Hi Ayush, we wanted to share an update on your application status."
+BLIND_BODY = "Hi Ivan, we wanted to share an update on your application status."
 
 
 def _row(

@@ -1068,7 +1068,7 @@ def _axis_repeat_anonymous_applications(b: _Builder) -> None:
             sender="noreply@" + token + ".test", sender_name=f"{display} Recruiting",
             subject=f"Thanks for applying to {display}",
             snippet=(
-                f"Hi Ayush, Thanks for applying to {display}! There are a ton of great "
+                f"Hi Ivan, Thanks for applying to {display}! There are a ton of great "
                 "companies out there, so we appreciate your interest in joining our "
                 "team. While we are not able to reach out to every applicant, our "
                 "recruiting team will contact you if your skills are a strong match."
@@ -1083,10 +1083,10 @@ def _axis_repeat_anonymous_applications(b: _Builder) -> None:
     for n, (subj, snip) in enumerate(
         (
             (f"Thanks for applying to {display}",
-             f"Hi Ayush, Thanks for applying to {display}. We are really glad you are "
+             f"Hi Ivan, Thanks for applying to {display}. We are really glad you are "
              "interested in what we are building. We review every application carefully."),
             (f"Thank you for applying to {display}!",
-             f"Hey Ayush, Thanks for your interest in a role with {display}; we confirm "
+             f"Hey Ivan, Thanks for your interest in a role with {display}; we confirm "
              "your application has been received. We respond to all candidates."),
         )
     ):
@@ -1136,7 +1136,7 @@ def _axis_repeat_anonymous_applications(b: _Builder) -> None:
             sender="donotreply@careers." + token + ".test",
             sender_name=f"{display} Careers",
             subject="Thank you for your application!",
-            snippet=f"Hi Ayush, thank you for taking the time to submit your application to {display}.",
+            snippet=f"Hi Ivan, thank you for taking the time to submit your application to {display}.",
             identity=f"{token}|__apply{n}__", employer=token, role=None,
             day=n, thread=shared,
         )

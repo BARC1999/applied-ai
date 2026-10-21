@@ -48,7 +48,7 @@ def ref(method: str | None, message_id: str = "m1") -> pipeline.MessageRef:
         received_at=RECEIVED,
         category="applied",
         confidence=0.9,
-        snippet="Hi Ayush Yadav, Thanks for applying to Google!",
+        snippet="Hi Ivan Kozlov, Thanks for applying to Google!",
         method=method,
     )
 

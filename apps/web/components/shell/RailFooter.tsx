@@ -38,7 +38,7 @@ import { DemoSignupCta } from "./SessionControls";
  * servers to the reader's browser. The box did not change size.
  *
  * The identity row shows the user's NAME, not the address — chosen explicitly
- * ("(A) Ayush Yadav" over the email), falling back to the address only when no
+ * ("(A) Ivan Kozlov" over the email), falling back to the address only when no
  * name is set. The email still ARRIVES as a prop and still matters: it is what
  * `distinctMailbox` compares the connected Gmail account against, and it rides
  * in the row's `title` and aria-label. When the two accounts genuinely DIFFER

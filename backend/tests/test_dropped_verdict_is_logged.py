@@ -15,7 +15,7 @@ them could catch this.
 The shape that actually fails is an ATS relay sender with no display name and a
 subject carrying no employer anchor. Modelled here on a real message:
 
-    subject  Anthropic Follow-Up for TPU Kernel Engineer | Ayush Yadav
+    subject  Anthropic Follow-Up for TPU Kernel Engineer | Ivan Kozlov
     sender   no-reply@us.greenhouse-mail.io
     name     (none)
 
@@ -61,11 +61,11 @@ import pytest
 from jobtracker.cloud import pipeline as p
 
 # The real message, verbatim in the parts that matter.
-ANTHROPIC_SUBJECT = "Anthropic Follow-Up for TPU Kernel Engineer | Ayush Yadav"
+ANTHROPIC_SUBJECT = "Anthropic Follow-Up for TPU Kernel Engineer | Ivan Kozlov"
 #: The same relay and the same absent display name, with a subject that names
 #: nobody. The control for every assertion about the one above: without it,
 #: "the employer resolves" is satisfied by a rule that resolves everything.
-ANCHORLESS_SUBJECT = "Update on your application | Ayush Yadav"
+ANCHORLESS_SUBJECT = "Update on your application | Ivan Kozlov"
 GREENHOUSE_RELAY = "no-reply@us.greenhouse-mail.io"
 WHEN = datetime(2026, 8, 1, 12, 0, tzinfo=UTC)
 
@@ -189,7 +189,7 @@ def test_a_confident_dropped_verdict_is_logged(caplog: pytest.LogCaptureFixture)
     """
 
     item = _real_shape(
-        "anthropic-followup-1", "follow_up", 0.90, sender="ayush@example.com"
+        "anthropic-followup-1", "follow_up", 0.90, sender="Ivan@example.com"
     )
 
     with caplog.at_level(logging.WARNING, logger="jobtracker.cloud.pipeline"):

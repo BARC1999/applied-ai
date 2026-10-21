@@ -46,7 +46,7 @@ const rulesRaw = (await import("../../lib/demo/rules.json")).default;
 // The message from the issue. Invented; safe in a public repository.
 const OFFER_SUBJECT = "An offer from Cedarhollow";
 const OFFER_BODY =
-  "Hi Ayush, We are delighted to extend you an offer to join us. The written " +
+  "Hi Ivan, We are delighted to extend you an offer to join us. The written " +
   "terms are attached for your review. This concerns your application for " +
   "the Backend Engineer position.";
 
@@ -72,7 +72,7 @@ test("a report beats the assertion at equal score, and the margin is unmoved", (
   // weak) against a volume apology (`rejection`, weak). 1–1.
   const v = classifyWithRules(
     "Important information about your application to Thorncombecross Dynamics",
-    "Hi Ayush, Thank you for your interest in Thorncombecross Dynamics and our " +
+    "Hi Ivan, Thank you for your interest in Thorncombecross Dynamics and our " +
       "Systems Engineer position. As you can imagine we received many qualified " +
       "applicants and some aligned better than others.",
     "no-reply@ats.rippling.com",

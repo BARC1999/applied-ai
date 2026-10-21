@@ -63,7 +63,7 @@ DIRECT_SENDER = "talent@northwind.example"
 
 OFFER_SUBJECT = "Your offer from Northwind Systems"
 OFFER_BODY = (
-    "Hi Ayush, We are delighted to extend you an offer to join Northwind Systems "
+    "Hi Ivan, We are delighted to extend you an offer to join Northwind Systems "
     "as a Backend Engineer. We are thrilled at the prospect of you joining the team."
 )
 

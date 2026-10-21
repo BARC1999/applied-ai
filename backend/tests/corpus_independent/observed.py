@@ -68,7 +68,7 @@ corpus's invented pool. Two reasons, and the second is the load-bearing one:
      reachable from every one of these shapes instead of one.
 
 These are FORM LETTERS: machine-sent boilerplate, identical to every applicant,
-with no personal correspondence in them. Nothing here was written to Ayush as a
+with no personal correspondence in them. Nothing here was written to Ivan as a
 person. Named recruiter mail and any thread with a human reply in it is
 deliberately absent and must stay absent.
 
@@ -94,7 +94,7 @@ Template = tuple[str, str, str]
 OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     (
         "Thank you for your application",
-        "Dear Ayush, Thank you very much for your recent application to the "
+        "Dear Ivan, Thank you very much for your recent application to the "
         "{role} position at {display}. We have received your resume and will "
         "contact you should there be interest in discussing this opportunity "
         "further.",
@@ -102,7 +102,7 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     ),
     (
         "Thanks for applying to {display}",
-        "Hi Ayush Yadav, Thanks for applying to {display}! There are a ton of "
+        "Hi Ivan Kozlov, Thanks for applying to {display}! There are a ton of "
         "great companies out there, so we appreciate your interest in joining "
         "our team. While we're not able to reach out to every applicant, our "
         "recruiting team is reviewing applications.",
@@ -110,14 +110,14 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     ),
     (
         "Thank you for your application!",
-        "Hi Ayush, Thank you for taking the time to submit your application for "
+        "Hi Ivan, Thank you for taking the time to submit your application for "
         "{role} (Job number: {req}). We're glad you're interested in a career "
         "at {display}, and we're here to help you find the right fit.",
         "in-house, thread 1a02341f84f11426 — 'a career at' is in the BODY",
     ),
     (
         "Thank you for applying to {display}",
-        "Hi Ayush, We appreciate you taking the time to submit an application "
+        "Hi Ivan, We appreciate you taking the time to submit an application "
         "for the {role} position, and are happy that you would consider joining "
         "our team! Please note that with the volume we receive we cannot always "
         "respond individually.",
@@ -125,35 +125,35 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     ),
     (
         "Thank you for applying to {display}",
-        "Hi Ayush, Thank you for taking the time and consideration to apply for "
+        "Hi Ivan, Thank you for taking the time and consideration to apply for "
         "the {role} role! We've received your application and will reach out if "
         "the hiring team decides to move forward.",
         "Greenhouse, thread 19ff9b96f09b478c",
     ),
     (
         "Thank you for applying to {display} | {role}",
-        "Hi Ayush, Thank you for your interest in {display}! We have received "
+        "Hi Ivan, Thank you for your interest in {display}! We have received "
         "your application for the {role} role and will be reviewing your "
         "background shortly. If there is a match we will be in touch.",
         "Ashby, thread 19ff9b86a7e1dc11",
     ),
     (
-        "Thank you for your application to {display}, Ayush!",
-        "Hi Ayush, Thank you for applying to {display} - we appreciate your "
+        "Thank you for your application to {display}, Ivan!",
+        "Hi Ivan, Thank you for applying to {display} - we appreciate your "
         "interest in joining our team! If our team thinks you could be a good "
         "fit for the {role} position, we'll be in touch.",
         "in-house, thread 19ff97772e932c0f",
     ),
     (
         "Thank you for Applying to {display}!",
-        "Hi Ayush, Thanks for applying to {display}! We've received your "
+        "Hi Ivan, Thanks for applying to {display}! We've received your "
         "application for the {role} (ID: {req}) position. What happens next? If "
         "we decide to move forward, a recruiter will contact you.",
         "in-house, thread 19ff85460f8e6c7e",
     ),
     (
         "Thank you for applying to {display}!",
-        "Dear Ayush, Thank you for your interest in potential opportunities "
+        "Dear Ivan, Thank you for your interest in potential opportunities "
         "with {display}. Your details have been added to our database and are "
         "under review. Should we feel that your background is a fit for a "
         "current opening, someone will reach out.",
@@ -161,56 +161,56 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     ),
     (
         "Thank you for applying to {display}!",
-        "Hey Ayush, Thanks so much for your interest in {display}! We "
+        "Hey Ivan, Thanks so much for your interest in {display}! We "
         "successfully received your application for the {role} role and are "
         "pumped to look over it. Our team will review it shortly.",
         "Greenhouse, thread 19ff3ca8459059db",
     ),
     (
         "Thank you for applying to {display}",
-        "Hi Ayush, Thank you so much for applying to the {role} role at "
+        "Hi Ivan, Thank you so much for applying to the {role} role at "
         "{display}! We are always looking for great talent and we are excited "
         "to receive your application. We will review it as soon as we can.",
         "Greenhouse, thread 19ff36237eef1ef3",
     ),
     (
         "Thanks for applying to {display}!",
-        "Hi Ayush, Thank you for applying for the {role} role at {display}! We "
+        "Hi Ivan, Thank you for applying for the {role} role at {display}! We "
         "appreciate your interest in joining the team. We will review your "
         "application and get back to you if there are next steps.",
         "Ashby, thread 19fef5b249d9f55b",
     ),
     (
         "Thank you for applying to {display}",
-        "Dear Ayush, Thank you for your interest in the {role} position at "
+        "Dear Ivan, Thank you for your interest in the {role} position at "
         "{display}. We have successfully received your online application. If "
         "your experience and qualifications match our needs we will contact you.",
         "Greenhouse, thread 19fef5a6830c268a",
     ),
     (
         "Thank You for Applying to {display}!",
-        "Hi Ayush, Thanks for your interest in {display}! We received your "
+        "Hi Ivan, Thanks for your interest in {display}! We received your "
         "application for the {role} position. Here's a quick note on what "
         "happens next in our process.",
         "SmartRecruiters, thread 19fef5a0f8e73d01",
     ),
     (
         "Thank You for Applying to {display}",
-        "Hi Ayush, Thank you for applying to {display}! We have received your "
+        "Hi Ivan, Thank you for applying to {display}! We have received your "
         "application and will review it promptly. If we think there is a good "
         "fit, we will contact you at this email address.",
         "Rippling, thread 19fef583bc64ea8b — names NO role anywhere",
     ),
     (
         "Your application has been received!",
-        "Hi Ayush, Thank you for submitting your application to be a {role} at "
+        "Hi Ivan, Thank you for submitting your application to be a {role} at "
         "{display}. Our team is reviewing your application and will be in touch "
         "if we think you're a potential match.",
         "Lever, thread 19fef5720d70b0c6 — subject names no employer",
     ),
     (
         "Thank You For Applying to {display}",
-        "Hi Ayush, We appreciate you taking the time to submit an application "
+        "Hi Ivan, We appreciate you taking the time to submit an application "
         "for the {role} position, and are delighted that you would consider "
         "joining our team! Please note that with the high volume of applicants "
         "we may not respond to everyone.",
@@ -218,41 +218,41 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
     ),
     (
         "Thank you for applying to {display}!",
-        "Hi Ayush, Thank you for beginning your application process with "
+        "Hi Ivan, Thank you for beginning your application process with "
         "{display}! We are excited to learn more about your interests and how "
         "your skill set will best contribute to our vision.",
         "in-house, thread 19fef5306e48fbe1 — 'beginning your application'",
     ),
     (
         "Thank you for applying to {display}",
-        "Ayush, Thanks for applying to {display}. Your application has been "
+        "Ivan, Thanks for applying to {display}. Your application has been "
         "received and we will review it right away. If your application seems "
         "like a good fit for the position we will contact you soon.",
         "in-house, thread 19feea170da07c85",
     ),
     (
         "Thank you for applying to {display}!",
-        "Hi Ayush, Thank you for applying to {display}! We received your "
+        "Hi Ivan, Thank you for applying to {display}! We received your "
         "application for the {role} role and we're excited to learn more about "
         "your skills and experience.",
         "in-house, thread 19fee9eb031d902e",
     ),
     (
         "Thank you for applying to {display}",
-        "Hi Ayush, Thank you for applying to {display}'s {role} position! We've "
+        "Hi Ivan, Thank you for applying to {display}'s {role} position! We've "
         "received your application and will review it as soon as possible.",
         "in-house, thread 19fee9dc121e50ca",
     ),
     (
         "Thank you for applying to {display}",
-        "Hi Ayush, Thanks for checking us out and applying for the {role} "
+        "Hi Ivan, Thanks for checking us out and applying for the {role} "
         "position with {display}! Your application has been received and we "
         "will review it right away. If we see a potential match we'll reach out.",
         "Greenhouse, thread 19fee9be6f27b36c",
     ),
     (
         "Thank you for applying to {display}!",
-        "Hi Ayush, Thank you for applying to {display}. Our hiring team will "
+        "Hi Ivan, Thank you for applying to {display}. Our hiring team will "
         "review your resume soon! Please note, due to the high volume of "
         "applications we receive, we are only able to contact candidates whose "
         "background is a close match.",
@@ -274,8 +274,8 @@ OBSERVED_CONFIRMATIONS: tuple[Template, ...] = (
 #: therefore asserts that the family built on it actually reaches the queue,
 #: rather than trusting this note to stay true.
 UNDER_THE_GATE: Template = (
-    "Thank you for your interest in {display}, Ayush",
-    "Hi Ayush, Thank you for your interest in the {role} opportunity. It "
+    "Thank you for your interest in {display}, Ivan",
+    "Hi Ivan, Thank you for your interest in the {role} opportunity. It "
     "means a lot to us that you would consider joining our mission here at "
     "{display}. Although your background is impressive, we have decided not "
     "to move forward at this time.",
@@ -284,8 +284,8 @@ UNDER_THE_GATE: Template = (
 
 OBSERVED_REJECTIONS: tuple[Template, ...] = (
     (
-        "Thank you from {display} - Ayush Yadav - {role}",
-        "Dear Ayush, Thank you for your interest in {display}. After careful "
+        "Thank you from {display} - Ivan Kozlov - {role}",
+        "Dear Ivan, Thank you for your interest in {display}. After careful "
         "consideration, we regret to inform you that we will not be proceeding "
         "with your candidacy for this role at this time. Please note that we "
         "will keep your details on file.",
@@ -293,7 +293,7 @@ OBSERVED_REJECTIONS: tuple[Template, ...] = (
     ),
     (
         "Important information about your application to {display}",
-        "Hi Ayush, Thank you for your interest in {display} and our {role} "
+        "Hi Ivan, Thank you for your interest in {display} and our {role} "
         "position. As you can imagine we received many qualified applicants and "
         "some aligned better than others. We will not be moving forward with "
         "your application at this time.",
@@ -302,7 +302,7 @@ OBSERVED_REJECTIONS: tuple[Template, ...] = (
     UNDER_THE_GATE,
     (
         "Thank You from {display}",
-        "Hi Ayush, Thank you for taking the time to apply to the {role} role "
+        "Hi Ivan, Thank you for taking the time to apply to the {role} role "
         "here at {display}. Please note, we have received many applications for "
         "this role and the search has been closed. We will not be proceeding "
         "with your candidacy.",
@@ -310,7 +310,7 @@ OBSERVED_REJECTIONS: tuple[Template, ...] = (
     ),
     (
         "Important information about your application to {role} @ {display}",
-        "Hi Ayush, Thank you so much for taking the time to apply for the "
+        "Hi Ivan, Thank you so much for taking the time to apply for the "
         "{role} opening at {display}. We know a lot of thought and "
         "consideration went into your application, and the team genuinely "
         "appreciates your interest. After careful review we have decided not to "
@@ -318,8 +318,8 @@ OBSERVED_REJECTIONS: tuple[Template, ...] = (
         "Greenhouse, thread 19ff7393d56eccfb — verdict at ~character 330",
     ),
     (
-        "{display} Follow-Up for {role} | Ayush Yadav",
-        "Hi Ayush, Thank you so much for your interest in {display} and for the "
+        "{display} Follow-Up for {role} | Ivan Kozlov",
+        "Hi Ivan, Thank you so much for your interest in {display} and for the "
         "time and effort you have invested in our process. After consideration, "
         "we have decided not to move forward with your application at this time.",
         "Greenhouse, thread 19ff4d11faa3721d",
@@ -331,14 +331,14 @@ OBSERVED_REJECTIONS: tuple[Template, ...] = (
 OBSERVED_ASSESSMENTS: tuple[Template, ...] = (
     (
         "[Action Required] Your {display} Assessments Invitation",
-        "{display} Assessments Invitation Hi Ayush, We're thrilled to invite "
+        "{display} Assessments Invitation Hi Ivan, We're thrilled to invite "
         "you to the next step of the recruiting process — the assessments! Our "
         "hiring assessments are a mix of technical and non-technical exercises.",
         "in-house, thread 19ff40b2535c5a0a",
     ),
     (
         "[Action Required] Your {display} Assessments Expire in 24 hours",
-        "Your Assessments Expire in 24 Hours Hi Ayush, Thank you for your "
+        "Your Assessments Expire in 24 Hours Hi Ivan, Thank you for your "
         "continued interest in {display}! Quick reminder that your assessments "
         "expire in 24 hours. Please complete them before then to stay in the "
         "process.",
@@ -346,7 +346,7 @@ OBSERVED_ASSESSMENTS: tuple[Template, ...] = (
     ),
     (
         "Reminder from {display}!",
-        "Hey Ayush, We hope you're doing well. Our team noticed you haven't had "
+        "Hey Ivan, We hope you're doing well. Our team noticed you haven't had "
         "a chance to complete your assessments yet. We understand it's a busy "
         "time of year; if you need more time or your link has expired, let us "
         "know.",
@@ -360,7 +360,7 @@ OBSERVED_ASSESSMENTS: tuple[Template, ...] = (
 OBSERVED_CLOSURES: tuple[Template, ...] = (
     (
         "Your {display} Assessments Have Expired",
-        "Your {display} Assessments Have Expired Hi Ayush, The assessments for "
+        "Your {display} Assessments Have Expired Hi Ivan, The assessments for "
         "your application have expired and as a result, your application is no "
         "longer active. If you're still interested in our openings you are "
         "welcome to apply again in the future.",
@@ -373,14 +373,14 @@ OBSERVED_CLOSURES: tuple[Template, ...] = (
 OBSERVED_PENDING: tuple[Template, ...] = (
     (
         "[Action Required] Your {display} Application",
-        "Email Verification Hi Ayush, Thank you for submitting your application "
+        "Email Verification Hi Ivan, Thank you for submitting your application "
         "for a position at {display}! Please click here to verify your email "
         "address and move to the next application step.",
         "in-house, thread 19fee9ebfef4b967",
     ),
     (
         "Keep track of your application",
-        "Hi Ayush, Thank you for your interest in {role} (ID: {req}). If you "
+        "Hi Ivan, Thank you for your interest in {role} (ID: {req}). If you "
         "have completed the application: Great! You can now check the "
         "application status in your candidate portal.",
         "in-house, thread 19ff8301447def4c — a SECOND mail per application",
@@ -394,7 +394,7 @@ OBSERVED_NOT_APPLICATIONS: tuple[Template, ...] = (
     (
         "Your {display} Career Profile verification code",
         "Enter this code in Career Profile. Career Profile Your {display} "
-        "Career Profile verification code Hi Ayush, Your verification code is: "
+        "Career Profile verification code Hi Ivan, Your verification code is: "
         "500108 This code expires in 10 minutes. If you didn't request a code "
         "you can ignore this message.",
         "in-house, thread 19ff828f23c57701 — says Career three times, is not one",

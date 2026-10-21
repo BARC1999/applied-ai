@@ -19,7 +19,7 @@ export const HELD_MAIL = {
   company: "Cedar Labs",
   subject: "Quick follow-up from Cedar Labs",
   sender: "team@cedarlabs.io",
-  body: "Hi Ayush, a quick note from our side — the review is taking a little longer than planned this cycle. Nothing is needed from you right now, and we appreciate your patience.",
+  body: "Hi Ivan, a quick note from our side — the review is taking a little longer than planned this cycle. Nothing is needed from you right now, and we appreciate your patience.",
 } as const;
 
 /** Cedar's live verdict — the confidence the queue row draws against the

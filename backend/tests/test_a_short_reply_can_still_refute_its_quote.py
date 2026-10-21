@@ -67,7 +67,7 @@ ATS_RELAY = "talent@ats.cedarhollow.example"
 #: The offer this thread is about, as the sender's client quotes it back.
 QUOTED_OFFER = (
     "\n\nOn Tuesday, Cedarhollow Systems Talent wrote:\n"
-    "> Hi Ayush,\n"
+    "> Hi Ivan,\n"
     "> We are pleased to offer you the position of Backend Engineer at\n"
     "> Cedarhollow Systems. Your start date will be 1 September and your\n"
     "> annual salary $145,000. Please sign and return the offer letter.\n"
@@ -77,7 +77,7 @@ QUOTED_OFFER = (
 #: a short reply above THIS must keep auto-filing.
 QUOTED_INVITE = (
     "\n\nOn Tuesday, Cedarhollow Systems Recruiting wrote:\n"
-    "> Hi Ayush,\n"
+    "> Hi Ivan,\n"
     "> We would like to invite you to interview for the Backend Engineer\n"
     "> role. Would you be available on Thursday at 2pm for a 45 minute\n"
     "> technical interview? Please confirm your availability and we will\n"
@@ -281,7 +281,7 @@ def test_a_long_withdrawal_is_untouched_by_this_rule(rules) -> None:
     """
 
     own = (
-        "Hi Ayush, Unfortunately we must withdraw the offer of employment "
+        "Hi Ivan, Unfortunately we must withdraw the offer of employment "
         "extended to you last week. The role has been closed and we are not "
         "able to move forward."
     )

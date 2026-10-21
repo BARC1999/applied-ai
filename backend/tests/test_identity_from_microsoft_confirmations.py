@@ -13,7 +13,7 @@ pattern the classifier must read — and so are the employer, the sender address
 and the requisition numbers. The role titles that named a specific posting are
 invented; see `docs/TEST_DATA_POLICY.md` (#593).
 
-    Hi Ayush, Thank you for taking the time to submit your application for
+    Hi Ivan, Thank you for taking the time to submit your application for
     Software Engineer II (Job number: 200045485). We're glad you're interested
     in a career at Microsoft...
 
@@ -63,7 +63,7 @@ def _snippet(role: str, number: str) -> str:
     """Microsoft's confirmation, in the shape Gmail's snippet delivers it."""
 
     return (
-        f"Hi Ayush, Thank you for taking the time to submit your application "
+        f"Hi Ivan, Thank you for taking the time to submit your application "
         f"for {role} (Job number: {number}). We're glad you're interested in a "
         f"career at Microsoft, and we're here to help"
     )

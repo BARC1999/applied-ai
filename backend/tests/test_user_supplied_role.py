@@ -59,7 +59,7 @@ SUPABASE = "no-reply@ashbyhq.com"
 # says nothing about a role either, so the pipeline extracts none.
 ACK_SUBJECT = "Thanks for applying to Supabase"
 ACK_SNIPPET = (
-    "Hi Ayush, thanks for applying! We&#39;ve received your application and the "
+    "Hi Ivan, thanks for applying! We&#39;ve received your application and the "
     "team will review it shortly."
 )
 
@@ -68,7 +68,7 @@ ACK_SNIPPET = (
 # — the protection is worth nothing if it is only ever exercised by a sync that
 # had nothing to write in the first place.
 ROLED_SUBJECT = "Your application for the Data Scientist role at Supabase"
-ROLED_SNIPPET = "Hi Ayush, an update on your Data Scientist application."
+ROLED_SNIPPET = "Hi Ivan, an update on your Data Scientist application."
 
 
 def at(minutes: int) -> datetime.datetime:
@@ -307,7 +307,7 @@ def _amazon_mail(message_id: str, *, role: str, req: str, minutes: int, applicat
         subject=AMAZON_SUBJECT,
         sender_email=AMAZON_SENDER,
         body_snippet=(
-            "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We've received your "
+            "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We've received your "
             f"application for the {role} (ID: {req}) position. What happens next?"
         ),
         received_at=BASE + datetime.timedelta(minutes=minutes),

@@ -322,7 +322,7 @@ def test_at_sign_is_read_only_for_ats_relays() -> None:
 def test_at_sign_refuses_an_email_address() -> None:
     # A dot followed by letters is a hostname, not a company.
     assert p._employer_from_subject("Update @ Careers.Acme.com", ats_relay=True) is None
-    assert p.resolve_employer("no-reply@ashbyhq.com", "Reply to ayush@together.ai", None) is None
+    assert p.resolve_employer("no-reply@ashbyhq.com", "Reply to Ivan@together.ai", None) is None
     # ...and refusing FALLS THROUGH rather than returning None outright, so the
     # anchored pattern still gets its turn.
     assert (
@@ -646,7 +646,7 @@ def _verkada(mid: str, role: str, minute: int) -> p.PipelineItem:
         sender_name="Verkada",
         subject="Thank you for applying to Verkada",
         snippet=(
-            f"Hi Ayush, Thank you so much for applying to the {role} role at "
+            f"Hi Ivan, Thank you so much for applying to the {role} role at "
             "Verkada! We are always looking for great talent and we are excited "
             "to receive your application. We will review it as"
         ),
@@ -759,7 +759,7 @@ def test_the_review_key_is_computed_from_the_text_that_is_stored() -> None:
 
     subject = "Thank you for applying to Verkada"
     filler = "We appreciate the time you invested in our process. " * 10
-    late = f"Hi Ayush, {filler} We received your application for the Backend Engineer, Alarms role."
+    late = f"Hi Ivan, {filler} We received your application for the Backend Engineer, Alarms role."
     assert len(late) > p.STORED_SNIPPET_CHARS
 
     def key(snippet: str):
@@ -770,7 +770,7 @@ def test_the_review_key_is_computed_from_the_text_that_is_stored() -> None:
     assert key(late) == key(late[: p.STORED_SNIPPET_CHARS])
 
     early = (
-        "Hi Ayush, Thank you so much for applying to the Backend Engineer, "
+        "Hi Ivan, Thank you so much for applying to the Backend Engineer, "
         "Alarms role at Verkada! We will review it as soon as we can."
     )
     assert len(early) < p.STORED_SNIPPET_CHARS

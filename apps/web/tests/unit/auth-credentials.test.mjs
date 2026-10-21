@@ -33,7 +33,7 @@ test("the two floors are deliberately different, and in the right order", () => 
 test("isValidEmail: the shapes a real address has", () => {
   for (const good of [
     "a@b.co",
-    "ayush@example.com",
+    "Ivan@example.com",
     "first.last@sub.domain.example.org",
     "user+tag@example.co.uk",
     "UPPER@EXAMPLE.COM",
@@ -128,6 +128,6 @@ test("credentialProblem: a password is never trimmed", () => {
 });
 
 test("credentialProblem: valid credentials produce no problem at all", () => {
-  assert.equal(credentialProblem("ayush@example.com", "correct horse", LOGIN_MIN_PASSWORD), null);
-  assert.equal(credentialProblem("  ayush@example.com  ", "correct horse", SIGNUP_MIN_PASSWORD), null);
+  assert.equal(credentialProblem("Ivan@example.com", "correct horse", LOGIN_MIN_PASSWORD), null);
+  assert.equal(credentialProblem("  Ivan@example.com  ", "correct horse", SIGNUP_MIN_PASSWORD), null);
 });

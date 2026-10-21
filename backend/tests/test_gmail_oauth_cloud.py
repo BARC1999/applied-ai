@@ -4673,7 +4673,7 @@ def _verkada_item(message_id: str, role: str, received_at: str) -> dict:
         "sender_name": "Verkada",
         "subject": "Thank you for applying to Verkada",
         "snippet": (
-            f"Hi Ayush, Thank you so much for applying to the {role} role at "
+            f"Hi Ivan, Thank you so much for applying to the {role} role at "
             "Verkada! We are always looking for great talent and we are excited "
             "to receive your application. We will review it as"
         ),

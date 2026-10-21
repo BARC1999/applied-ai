@@ -132,7 +132,7 @@ test("deadlinePulse: a tie keeps the board's own order", () => {
 });
 
 /**
- * The caption, in the band's caption grammar. Ayush reported this cell twice —
+ * The caption, in the band's caption grammar. Ivan reported this cell twice —
  * "it has the same issue with text that we fixed for other" — against
  * `2 overdue · 1 due ≤2d · 5 later`: a per-bucket recitation whose middle
  * claim put a bare `1` against the unit `≤2d`, and which ended on the one

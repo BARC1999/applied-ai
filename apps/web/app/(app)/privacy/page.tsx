@@ -303,7 +303,7 @@ function PrivacyDocument({ inShell }: { inShell: boolean }) {
         <div className="space-y-12">
           <Section id="who" n={1} title="Who runs Applied">
             <P>
-              Applied is built and run by Ayush Yadav, one person, as a personal project. It is in
+              Applied is built and run by Ivan Kozlov, one person, as a personal project. It is in
               invite-only beta. There is no company behind it and no staff. Anything you want to
               ask, correct or have deleted goes to{" "}
               <a href={`mailto:${CONTACT}`} className={LINK}>
@@ -738,7 +738,7 @@ export default async function PrivacyPage() {
       <footer className="border-t border-line-soft">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-2 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[0.8125rem] text-dim">
-            Applied · built and run by Ayush Yadav · updated {UPDATED}
+            Applied · built and run by Ivan Kozlov · updated {UPDATED}
           </p>
           <nav className="flex items-center gap-5 text-[0.8125rem] text-dim">
             <Link href="/" className="transition-colors hover:text-strong">

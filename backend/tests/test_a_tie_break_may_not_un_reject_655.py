@@ -55,13 +55,13 @@ SENDER = "careers@halverstock.test"
 #: No job title, no requisition number — nothing a reader turns into an
 #: identity. This is what makes the cluster reach rule 4 at all.
 ANON_SNIPPET = (
-    "Hi Ayush, thanks for applying! We appreciate your interest in joining the "
+    "Hi Ivan, thanks for applying! We appreciate your interest in joining the "
     "team and will be in contact if there is a match."
 )
 #: Names its job, so the cluster carries a role token and rules 1 to 3 answer
 #: it. The control for section 3.
 NAMED_SNIPPET = (
-    "Hi Ayush, thank you for applying to the Platform Engineer position. Your "
+    "Hi Ivan, thank you for applying to the Platform Engineer position. Your "
     "application has been received and our team will review it shortly."
 )
 

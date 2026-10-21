@@ -51,11 +51,11 @@ ACME = "careers@acme.com"
 # names the role (so it keys the cluster); the rejection names none, which is the
 # common shape — at an employer with a single application it joins that one.
 CONF_SUBJECT = "Thanks for applying to the Data Scientist role at Acme"
-CONF_SNIPPET = "Hi Ayush, we have received your application and will review it shortly."
+CONF_SNIPPET = "Hi Ivan, we have received your application and will review it shortly."
 REJ_SUBJECT = "Update on your application"
-REJ_SNIPPET = "Hi Ayush, we have decided not to move forward at this time."
+REJ_SNIPPET = "Hi Ivan, we have decided not to move forward at this time."
 INTERVIEW_SUBJECT = "Interview for the Data Scientist role at Acme"
-INTERVIEW_SNIPPET = "Hi Ayush, we would like to schedule an interview with you."
+INTERVIEW_SNIPPET = "Hi Ivan, we would like to schedule an interview with you."
 
 
 def at(minutes: int) -> datetime.datetime:
@@ -278,7 +278,7 @@ UNCHANGED_CORPORA = {
         item(
             "k10",
             subject="Thanks for applying to the Platform Engineer role at Acme",
-            snippet="Hi Ayush, we have received your application.",
+            snippet="Hi Ivan, we have received your application.",
             minutes=50,
         ),
     ],

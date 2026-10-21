@@ -68,7 +68,7 @@ REPORTED_SENDER = "do-not-reply@coderbyte.example"
 REPORTED_SUBJECT = "Netic AI invites you to take an assessment"
 REPORTED_NAME = "Coderbyte"
 REPORTED_BODY = (
-    "Hi Ayush,\n\nYou have been invited by Netic AI to complete an assessment. "
+    "Hi Ivan,\n\nYou have been invited by Netic AI to complete an assessment. "
     "Please use the link below to begin; it expires in 7 days.\n"
 )
 
@@ -296,7 +296,7 @@ def test_the_invitation_reading_refuses_a_non_assessment_invitation() -> None:
     THE SENDER IS A VENDOR ON PURPOSE. An earlier version of this test ran
     #535's own subject list through Greenhouse, and five of its seven rows were
     inert: "Invitation to interview | Acme", "Decision on your application |
-    Acme", "Sorry for the delay…", "Congratulations Ayush…" and "Reminder:
+    Acme", "Sorry for the delay…", "Congratulations Ivan…" and "Reminder:
     Complete your assessment | HackerRank" contain no "invites/invited you" at
     all, so they return None whatever this pattern does. That is precisely the
     critique #535 levelled at the test written for IT — "15 of the 18 already
@@ -326,7 +326,7 @@ def test_the_invitation_reading_refuses_a_non_assessment_invitation() -> None:
         "Invitation to interview | Acme",
         "Decision on your application | Acme",
         "Sorry for the delay in getting back to you | Acme",
-        "Congratulations Ayush on your application | Acme",
+        "Congratulations Ivan on your application | Acme",
         "Reminder: Complete your assessment | HackerRank",
     ):
         assert p.resolve_employer(VENDOR_SENDER, subject, None) is None, subject
@@ -482,7 +482,7 @@ def test_a_prefix_before_the_employer_is_read_through() -> None:
         "[Action Required] Netic AI invites you to take an assessment",
         "Action Required: Netic AI invites you to take an assessment",
         "Reminder: Netic AI invites you to take an assessment",
-        "Hi Ayush, Netic AI invites you to take an assessment",
+        "Hi Ivan, Netic AI invites you to take an assessment",
     ):
         assert p.resolve_employer(REPORTED_SENDER, subject, REPORTED_NAME) == (
             "netic",

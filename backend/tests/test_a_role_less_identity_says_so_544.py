@@ -177,7 +177,7 @@ def test_the_settler_refuses_a_collapse_that_would_merge() -> None:
             subject="Thanks for your interest",
             sender="careers@northwind.example",
             sender_name="Northwind Talent",
-            body="Hi Ayush, your details have been added to our database.",
+            body="Hi Ivan, your details have been added to our database.",
             expected_category="applied",
             identity=f"northwind|{role}",
             employer="northwind",

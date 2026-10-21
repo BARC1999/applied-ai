@@ -249,7 +249,7 @@ export interface DeadlineClaim {
 }
 
 /**
- * The deadline cell's caption, in the band's caption grammar (Ayush, twice:
+ * The deadline cell's caption, in the band's caption grammar (Ivan, twice:
  * `6 <1 wk · 5 1–2 wk · 3 quiet` — "these text are still there, they are lot
  * confusing!" — and then, of this cell, "it has the same issue with text that
  * we fixed for other"). What shipped here was the same defect one cell over:

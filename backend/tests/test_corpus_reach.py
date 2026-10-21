@@ -994,7 +994,7 @@ def test_the_families_recorded_at_zero_still_discover_nothing(measured) -> None:
 #: already knows proves nothing.
 _UNTAUGHT_SUBJECT = "A note from the team"
 _UNTAUGHT_BODY = (
-    "Ayush, the panel liked what they saw and the team will circle back once "
+    "Ivan, the panel liked what they saw and the team will circle back once "
     "the req is signed off upstairs."
 )
 

@@ -107,7 +107,7 @@ REAL_CONFIRMATION_BODY = (
 #: The phrasing an EMPLOYER uses for the same fact — second person, and it must
 #: keep scoring after the anchor lands.
 EMPLOYER_SECOND_PERSON = (
-    "Hi Ayush, you applied for the Platform Engineer position at Halden "
+    "Hi Ivan, you applied for the Platform Engineer position at Halden "
     "Systems on Monday. Here is what happens next."
 )
 

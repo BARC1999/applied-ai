@@ -129,7 +129,7 @@ export const BuildClosingPage: React.FC<{
       >
         Applied · System Card Vol. 01
         <br />
-        Ayush Yadav · 2026
+        Ivan Kozlov · 2026
       </div>
 
       {/* envelope→verdict resolve mark, lower-right */}

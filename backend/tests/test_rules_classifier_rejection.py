@@ -56,11 +56,11 @@ CLASSIFIER = RulesClassifier()
 # The production message, byte for byte.
 # ---------------------------------------------------------------------------
 ANTHROPIC_SENDER = "no-reply@us.greenhouse-mail.io"
-ANTHROPIC_SUBJECT = "Anthropic Follow-Up for TPU Kernel Engineer | Ayush Yadav"
+ANTHROPIC_SUBJECT = "Anthropic Follow-Up for TPU Kernel Engineer | Ivan Kozlov"
 # Exactly what the Gmail API's `snippet` field carries. A cloud scan fetches
 # metadata only, so this is ALL the classifier ever sees of the body.
 ANTHROPIC_SNIPPET = (
-    "Hi Ayush, Thank you so much for your interest in Anthropic and for the "
+    "Hi Ivan, Thank you so much for your interest in Anthropic and for the "
     "time and effort you have invested in our process. After consideration, "
     "we have decided not to move forward with your application"
 )
@@ -315,11 +315,11 @@ def test_the_real_confirmation_still_classifies_applied_at_090() -> None:
 # ---------------------------------------------------------------------------
 PALANTIR_SENDER = "no-reply@hire.lever.co"
 PALANTIR_SUBJECT = (
-    "Thank you from Palantir Technologies - Ayush Yadav - Software Engineer, New Grad"
+    "Thank you from Palantir Technologies - Ivan Kozlov - Software Engineer, New Grad"
 )
 # Email 114, exactly as stored: Gmail's snippet, truncated where Gmail truncates.
 PALANTIR_SNIPPET = (
-    "Dear Ayush, Thank you for your interest in Palantir. After careful "
+    "Dear Ivan, Thank you for your interest in Palantir. After careful "
     "consideration, we regret to inform you that we will not be proceeding "
     "with your candidacy for this role at this time. Please note that"
 )
@@ -399,7 +399,7 @@ def test_the_palantir_acknowledgement_is_untouched() -> None:
     """
     result = CLASSIFIER.classify(
         "Your application has been received!",
-        "Hi Ayush, Thank you for submitting your application to be a Software "
+        "Hi Ivan, Thank you for submitting your application to be a Software "
         "Engineer, New Grad at Palantir. Our team is reviewing your application "
         "and will be in touch if we think you're a potential match",
         PALANTIR_SENDER,
@@ -507,7 +507,7 @@ def test_a_follow_up_verdict_files_nothing_and_now_reaches_a_person() -> None:
     own = pipeline.PipelineItem(
         message_id="own-chasing-mail",
         category="follow_up",
-        sender_email="ayush@example.com",
+        sender_email="Ivan@example.com",
         subject=ANTHROPIC_SUBJECT,
         sender_name=None,
         received_at=None,

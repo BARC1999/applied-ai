@@ -155,7 +155,7 @@ test("a malformed address is caught by the same check the other two forms run", 
     field: "email",
     message: "That doesn’t look like an email address.",
   });
-  assert.equal(emailProblem("  ayush@example.com  "), null);
+  assert.equal(emailProblem("  Ivan@example.com  "), null);
   assert.deepEqual(
     emailProblem("not-an-email"),
     credentialProblem("not-an-email", "longenoughpassword", SIGNUP_MIN_PASSWORD),

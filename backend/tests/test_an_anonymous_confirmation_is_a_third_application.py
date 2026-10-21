@@ -116,7 +116,7 @@ def identified(message_id: str, role: str, day: int, *, thread_id: str | None = 
         message_id,
         subject=f"Thank you for applying to {DISPLAY}",
         snippet=(
-            f"Hi Ayush, Thank you for applying to the {role} position at {DISPLAY}. "
+            f"Hi Ivan, Thank you for applying to the {role} position at {DISPLAY}. "
             "Your application has been received and our team will review it shortly."
         ),
         day=day,
@@ -130,7 +130,7 @@ def identified(message_id: str, role: str, day: int, *, thread_id: str | None = 
 #: of a template is a second submission, where two DIFFERENT templates hours
 #: apart are one submission acknowledged twice.
 ANONYMOUS_SNIPPET = (
-    f"Hi Ayush, Thanks for applying to {DISPLAY}! There are a ton of great "
+    f"Hi Ivan, Thanks for applying to {DISPLAY}! There are a ton of great "
     "companies out there, so we appreciate your interest in joining our team. "
     "While we are not able to reach out to every applicant, our recruiting team "
     "will contact you if there is a match."

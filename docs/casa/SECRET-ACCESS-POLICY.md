@@ -424,7 +424,7 @@ dependency this project has decided against.
 4. **GitHub provides no equivalent for `DIRECT_URL`, and none is claimed.**
    GitHub's audit log is an organisation and enterprise feature. This
    repository is owned by a personal account, which belongs to no organisation:
-   `GET /users/yadava5/audit-log` returns `404 Not Found` and `GET /user/orgs`
+   `GET /users/BARC1999/audit-log` returns `404 Not Found` and `GET /user/orgs`
    returns an empty list, both checked 2026-08-16. Separately, even where an
    audit log does exist it records the *management* of Actions secrets rather
    than a workflow's reads of them. So the CI limb of this control has no

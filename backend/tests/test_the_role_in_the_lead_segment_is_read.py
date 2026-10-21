@@ -203,7 +203,7 @@ NO_EMPLOYER_PREFIX = [
     "Follow-Up for Backend Engineer | Acme",
     "Invitation to interview | Acme",
     "Decision on your application | Acme",
-    "Congratulations Ayush on your application | Acme",
+    "Congratulations Ivan on your application | Acme",
     "Sorry for the delay in getting back to you | Acme",
 ]
 

@@ -44,18 +44,18 @@ from jobtracker.database.models import EmailCategory
 ATS = "no-reply@greenhouse.io"
 
 QUOTED_INVITE = (
-    "Hi Ayush, Following up on the below — we would like to invite you to "
+    "Hi Ivan, Following up on the below — we would like to invite you to "
     "interview next week. Are you available Thursday?\n\n"
     "On Tuesday, Cedarhollow Systems Recruiting wrote:\n"
-    "> Hi Ayush, Thank you for applying to the Backend Engineer position at\n"
+    "> Hi Ivan, Thank you for applying to the Backend Engineer position at\n"
     "> Cedarhollow Systems. Your application has been received.\n"
 )
 
 QUOTED_WITHDRAWAL = (
-    "Hi Ayush, We are sorry to say we must withdraw the offer of employment "
+    "Hi Ivan, We are sorry to say we must withdraw the offer of employment "
     "extended to you last week. The role has been closed.\n\n"
     "On Monday, Cedarhollow Systems Talent wrote:\n"
-    "> Hi Ayush, We are delighted to extend you an offer to join\n"
+    "> Hi Ivan, We are delighted to extend you an offer to join\n"
     "> Cedarhollow Systems as a Backend Engineer.\n"
 )
 
@@ -212,7 +212,7 @@ def test_prose_that_merely_resembles_an_attribution_is_left_alone(body: str) -> 
 
 
 def test_a_message_with_no_quote_is_returned_untouched() -> None:
-    plain = "Hi Ayush, Unfortunately we will not be moving forward. Best of luck."
+    plain = "Hi Ivan, Unfortunately we will not be moving forward. Best of luck."
     assert strip_quoted_history(plain) == plain
     assert asserted_text(plain) == asserted_text(asserted_text(plain))
 
@@ -229,7 +229,7 @@ def test_a_reply_subject_does_not_outvote_the_body(rules) -> None:
     """
 
     body = (
-        "Hi Ayush, We would like to invite you to interview next week. "
+        "Hi Ivan, We would like to invite you to interview next week. "
         "Please pick a time that works."
     )
     fresh = rules.classify("Thank you for applying to Cedarhollow", body, ATS)
@@ -254,7 +254,7 @@ def test_a_reply_subject_still_counts_for_something(rules) -> None:
     the classifier with nothing at all, which is a different failure.
     """
 
-    thin = "Hi Ayush, Please see the attached."
+    thin = "Hi Ivan, Please see the attached."
     with_subject = rules.classify("Re: Thank you for applying to Cedar", thin, ATS)
     without = rules.classify("Re: hello", thin, ATS)
     assert with_subject.scores["applied"] > without.scores["applied"]
@@ -278,7 +278,7 @@ MICROSOFT = [
 
 def _microsoft(role: str, number: str) -> str:
     return (
-        f"Hi Ayush, Thank you for taking the time to submit your application "
+        f"Hi Ivan, Thank you for taking the time to submit your application "
         f"for {role} (Job number: {number}). We are glad you are interested in "
         f"a career at Microsoft, and we are here to help"
     )

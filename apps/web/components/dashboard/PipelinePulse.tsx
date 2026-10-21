@@ -141,7 +141,7 @@ import { PulseDetail, type PulseDetailKind } from "./PulseDetail";
  * panel one click away, and a zero-day's 2px stub is distinguished by SIZE,
  * not by its hairline ink.
  *
- * Caption grammar (Ayush, 2026-08-13, on `6 <1 wk · 5 1–2 wk · 3 quiet`:
+ * Caption grammar (Ivan, 2026-08-13, on `6 <1 wk · 5 1–2 wk · 3 quiet`:
  * "these text are still there, they are lot confusing!"): a caption is ONE
  * claim, two at most, each binding one figure to the words that own it —
  * never the per-bucket recitation, which was six numerals in nine words
@@ -283,7 +283,7 @@ function DayStrip({
  * hold a row; the cell that owns the layout is the one that can promise it.
  *
  * A cell given `expand` is a TRIGGER for the detail panel: a stretched button
- * fills the whole cell (Ayush's ask was "click the whole momentum", not a
+ * fills the whole cell (Ivan's ask was "click the whole momentum", not a
  * disclosure glyph), the grid rides above it inert (`pointer-events-none`) so
  * hits land on the button, and anything inside that must stay interactive
  * (the review-queue link) opts back in with `pointer-events-auto`. The grid
@@ -541,7 +541,7 @@ export function PipelinePulse({
   const scopeNote = complete ? null : `newest ${applications.length} of ${total}`;
 
   /** The ageing caption — ONE claim, per the band's caption grammar. The
-   *  first cut here (#159) omitted the empty buckets; Ayush re-reported it
+   *  first cut here (#159) omitted the empty buckets; Ivan re-reported it
    *  on a board with NO empty buckets (`6 <1 wk · 5 1–2 wk · 3 quiet` —
    *  "these text are still there, they are lot confusing!"), which is the
    *  proof the recitation itself was the defect, not the zeroes. The bar

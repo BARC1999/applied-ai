@@ -1,6 +1,6 @@
 {"subject":"Thank you for applying to Backend Engineer at Acme","body_text":"We have received your application and will review your qualifications shortly.","label":"applied","sender_email":"no-reply@greenhouse.io"}
 {"subject":"Your application for IT Operations Engineer at Superhuman","body_text":"Thanks for applying. We will review your application and share next steps.","label":"applied","sender_email":"no-reply@us.greenhouse-mail.io"}
-{"subject":"Ayush, your application was sent to Fanduel Inc.","body_text":"Your application was sent to Fanduel Inc. Software Engineer role.","label":"applied","sender_email":"jobs-noreply@linkedin.com"}
+{"subject":"Ivan, your application was sent to Fanduel Inc.","body_text":"Your application was sent to Fanduel Inc. Software Engineer role.","label":"applied","sender_email":"jobs-noreply@linkedin.com"}
 {"subject":"Application received - Product Designer","body_text":"We have successfully received your application for Product Designer.","label":"applied","sender_email":"careers@company.com"}
 {"subject":"Thank you for your interest in the Data Analyst position","body_text":"Your application is in review and we will be in touch soon.","label":"applied","sender_email":"talent@startup.io"}
 {"subject":"Complete your application for Software Engineer","body_text":"You are almost done. Please complete your application before we can review your candidacy.","label":"pending_application","sender_email":"notifications@greenhouse.io"}

@@ -70,7 +70,7 @@ def _named(role: str, req: str) -> str:
     """A confirmation that names the role, in the shape the extractor reads."""
 
     return (
-        "Hi Ayush, Thanks for applying! We've received your "
+        "Hi Ivan, Thanks for applying! We've received your "
         f"application for the {role} (ID: {req}) position. What happens next?"
     )
 
@@ -84,7 +84,7 @@ def _silent() -> str:
     """
 
     return (
-        "Hi Ayush, thank you for your interest in potential opportunities with "
+        "Hi Ivan, thank you for your interest in potential opportunities with "
         "us. Your details have been added to our database and we will be in "
         "touch if a suitable role opens up."
     )

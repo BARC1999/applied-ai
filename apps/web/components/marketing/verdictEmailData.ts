@@ -30,7 +30,7 @@ export const VERDICT_EMAIL = {
   senderName: "Northstar Systems Talent",
   senderEmail: "talent@northstarsystems.dev",
   subject: "Your application to Northstar Systems",
-  body: "Hi Ayush, thank you for applying to the ML Engineer position at Northstar Systems, and for the detail you shared about your work. We have been reviewing applications carefully over the past two weeks, and we would like to invite you for an interview with the team. The technical round runs about an hour, and we can work around your schedule — could you share your availability for next week? We look forward to speaking with you.",
+  body: "Hi Ivan, thank you for applying to the ML Engineer position at Northstar Systems, and for the detail you shared about your work. We have been reviewing applications carefully over the past two weeks, and we would like to invite you for an interview with the team. The technical round runs about an hour, and we can work around your schedule — could you share your availability for next week? We look forward to speaking with you.",
 } as const;
 
 export const OFFER_EMAIL = {
@@ -39,7 +39,7 @@ export const OFFER_EMAIL = {
   senderName: "Larkspur Systems Recruiting",
   senderEmail: "no-reply@larkspur.dev",
   subject: "Your offer from Larkspur Systems",
-  body: "Hi Ayush, thank you for your patience while the team wrapped up this week. We are delighted to extend an offer for the Staff Software Engineer role at Larkspur Systems — your offer letter is attached, with compensation and start date inside. We would love to have you on the team, and we are happy to walk through any of it with you.",
+  body: "Hi Ivan, thank you for your patience while the team wrapped up this week. We are delighted to extend an offer for the Staff Software Engineer role at Larkspur Systems — your offer letter is attached, with compensation and start date inside. We would love to have you on the team, and we are happy to walk through any of it with you.",
 } as const;
 
 /** Gmail's snippet budget — the honest reason the preview verdict is wrong. */

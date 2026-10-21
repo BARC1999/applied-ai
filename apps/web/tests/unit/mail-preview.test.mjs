@@ -39,7 +39,7 @@ const { MailSnippet, OpenInGmail } = await importTsx("components/mail/MailPrevie
 
 /** A real snippet, as Gmail hands one over (already entity-decoded server-side). */
 const SNIPPET =
-  "Dear Ayush, Thank you for your interest in potential opportunities with " +
+  "Dear Ivan, Thank you for your interest in potential opportunities with " +
   "Jump Trading. Your details have been added to our database and…";
 
 const GMAIL_LINK = "https://mail.google.com/mail/?authuser=owner%40example.test#all/t1";

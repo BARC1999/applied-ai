@@ -52,11 +52,11 @@ OWNER = "aaaaaaaa-1111-2222-3333-444444444444"
 PALANTIR_MESSAGE_ID = "corrected-msg-palantir"
 PALANTIR_THREAD_ID = "corrected-thread-palantir"
 PALANTIR_SUBJECT = (
-    "Thank you from Palantir Technologies - Ayush Yadav - Software Engineer, New Grad"
+    "Thank you from Palantir Technologies - Ivan Kozlov - Software Engineer, New Grad"
 )
 PALANTIR_SENDER = "no-reply@hire.lever.co"
 PALANTIR_SNIPPET = (
-    "Dear Ayush, Thank you for your interest in Palantir. After careful "
+    "Dear Ivan, Thank you for your interest in Palantir. After careful "
     "consideration, we regret to inform you that we will not be proceeding "
     "with your candidacy for this role at this time. Please note that"
 )

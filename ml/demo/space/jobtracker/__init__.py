@@ -24,4 +24,4 @@ Usage:
 """
 
 __version__ = "0.1.0"
-__author__ = "Ayush Yadav"
+__author__ = "Ivan Kozlov"

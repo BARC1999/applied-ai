@@ -215,7 +215,7 @@ function headClassify(vec) {
 
 /* ---------- UI ---------- */
 const EXAMPLES = [
-  ['Interview availability — SWE, Platform', "Hi Ayush, thanks for applying. We'd like to schedule a 45-minute technical interview next week. Could you share your availability?"],
+  ['Interview availability — SWE, Platform', "Hi Ivan, thanks for applying. We'd like to schedule a 45-minute technical interview next week. Could you share your availability?"],
   ['Your application was received', 'Thank you for applying to the Backend Engineer role. Our team is reviewing applications and will reach out if there is a match.'],
   ['Update on your application', "After careful consideration, we've decided to move forward with other candidates. We appreciate the time you invested."],
   ['Congratulations — offer details inside', "We're thrilled to extend an offer for the ML Engineer position. Compensation and start date are in the attached letter."],

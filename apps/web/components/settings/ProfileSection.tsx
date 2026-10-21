@@ -111,7 +111,7 @@ export function ProfileSection({
               setName(e.target.value);
               setState("idle");
             }}
-            placeholder="e.g. Ayush Yadav"
+            placeholder="e.g. Ivan Kozlov"
             className={inputClass}
             maxLength={80}
           />

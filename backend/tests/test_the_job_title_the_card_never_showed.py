@@ -51,7 +51,7 @@ from jobtracker.cloud.pipeline import role_from_message
     "body,expected",
     [
         (
-            "Hi Ayush, We are delighted to extend you an offer to join Northwind "
+            "Hi Ivan, We are delighted to extend you an offer to join Northwind "
             "Labs as a Associate Software Engineer, Operator Experience. We are "
             "thrilled at the prospect of you joining the team.",
             "Associate Software Engineer, Operator Experience",
@@ -70,7 +70,7 @@ from jobtracker.cloud.pipeline import role_from_message
             "Infrastructure Engineer",
         ),
         (
-            "Hi Ayush, Thank you for taking the time to submit your application "
+            "Hi Ivan, Thank you for taking the time to submit your application "
             "for Software Engineer I, Entry-Level (Graduation Date: Fall "
             "2025-Summer 2026) at Northwind. We are glad you are interested.",
             "Software Engineer I, Entry-Level (Graduation Date: Fall 2025-Summer 2026)",

@@ -446,6 +446,6 @@ def test_a_genuine_follow_up_still_reads_as_one(subject: str, body: str) -> None
     must survive is the reader's own chasing mail, which is what the category
     means. Measured at 0.95 and 0.90 across the change — unmoved.
     """
-    result = CLASSIFIER.classify(subject, body, "ayush@example.com")
+    result = CLASSIFIER.classify(subject, body, "Ivan@example.com")
     assert result.category is EmailCategory.FOLLOW_UP, result.scores
     assert result.confidence >= 0.85, result.scores

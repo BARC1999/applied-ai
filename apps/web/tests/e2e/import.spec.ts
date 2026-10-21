@@ -433,10 +433,10 @@ test.describe("a conditional explainer is not a rejection", () => {
  */
 test.describe("a reply is not its own thread", () => {
   const QUOTED_INVITE =
-    "Hi Ayush, Following up on the below - we would like to invite you to " +
+    "Hi Ivan, Following up on the below - we would like to invite you to " +
     "interview next week. Are you available Thursday?\n\n" +
     "On Tuesday, Cedarhollow Systems Recruiting wrote:\n" +
-    "> Hi Ayush, Thank you for applying to the Backend Engineer position at\n" +
+    "> Hi Ivan, Thank you for applying to the Backend Engineer position at\n" +
     "> Cedarhollow Systems. Your application has been received.\n";
 
   /**
@@ -445,7 +445,7 @@ test.describe("a reply is not its own thread", () => {
    * `docs/TEST_DATA_POLICY.md`.
    */
   const MICROSOFT =
-    "Hi Ayush, Thank you for taking the time to submit your application for " +
+    "Hi Ivan, Thank you for taking the time to submit your application for " +
     "Fleet-Provisioning (Job number: 200007619). We are glad you are interested " +
     "in a career at Microsoft, and we are here to help";
 

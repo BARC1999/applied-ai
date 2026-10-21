@@ -67,9 +67,9 @@ GREENHOUSE = "no-reply@us.greenhouse-mail.io"
 DISPLAY = "Otterburyshore Dynamics"
 ROLE = "Data Engineer"
 
-SUBJECT = f"{DISPLAY} Follow-Up for {ROLE} | Ayush Yadav"
+SUBJECT = f"{DISPLAY} Follow-Up for {ROLE} | Ivan Kozlov"
 BODY = (
-    f"Hi Ayush, Thank you so much for your interest in {DISPLAY} and for the "
+    f"Hi Ivan, Thank you so much for your interest in {DISPLAY} and for the "
     "time and effort you have invested in our process. After consideration, "
     "we have decided not to move forward with your application at this time."
 )
@@ -180,7 +180,7 @@ def test_a_follow_up_nobody_relayed_is_still_dropped() -> None:
     """
 
     for sender in (
-        "ayush@example.com",
+        "Ivan@example.com",
         "careers@otterburyshore.example",
         "hiring-manager@otterburyshore.example",
         "no-reply@notifications.linkedin.com",
@@ -280,28 +280,28 @@ def test_the_mail_a_relay_sends_that_is_not_yours_still_drops() -> None:
     shapes = (
         (
             f"New roles at {DISPLAY} this week",
-            f"Hi Ayush, here are the latest openings at {DISPLAY}: {ROLE}, and "
+            f"Hi Ivan, here are the latest openings at {DISPLAY}: {ROLE}, and "
             "several more on our careers page. Set up an alert to hear first.",
         ),
         (
             f"Join the {DISPLAY} talent community",
-            f"Hi Ayush, we are building a community of engineers interested in "
+            f"Hi Ivan, we are building a community of engineers interested in "
             f"{DISPLAY}. Join to hear about openings like {ROLE} before they "
             "are posted publicly.",
         ),
         (
             f"Complete your {DISPLAY} candidate profile",
-            "Hi Ayush, your candidate profile is missing a few details. Adding "
+            "Hi Ivan, your candidate profile is missing a few details. Adding "
             f"them helps our recruiters find you for roles such as {ROLE}.",
         ),
         (
             f"A quick survey from {DISPLAY} recruiting",
-            "Hi Ayush, we are asking engineers what matters most when choosing "
+            "Hi Ivan, we are asking engineers what matters most when choosing "
             "a team. Two minutes, and it helps us hire better.",
         ),
         (
             f"Know someone for {ROLE} at {DISPLAY}?",
-            f"Hi Ayush, we are hiring a {ROLE} and referrals are how we find "
+            f"Hi Ivan, we are hiring a {ROLE} and referrals are how we find "
             "the best people. Pass this along to anyone who would be a fit.",
         ),
     )

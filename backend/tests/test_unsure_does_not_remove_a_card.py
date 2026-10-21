@@ -58,7 +58,7 @@ MESSAGE = "1a0234892a06beef"
 #: product files without asking. The role title is invented, because the real
 #: one named a specific posting (#593).
 SNIPPET = (
-    "Hi Ayush, Thank you for taking the time to submit your application for "
+    "Hi Ivan, Thank you for taking the time to submit your application for "
     "Fleet-Provisioning (Job number: 200007619). We're glad you're interested "
     "in a career at Microsoft, and we're here to help"
 )

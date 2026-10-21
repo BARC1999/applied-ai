@@ -77,7 +77,7 @@ JSON_RULES = (
 # The message from the issue. Invented, and safe in a public repository.
 OFFER_SUBJECT = "An offer from Cedarhollow"
 OFFER_BODY = (
-    "Hi Ayush, We are delighted to extend you an offer to join us. The written "
+    "Hi Ivan, We are delighted to extend you an offer to join us. The written "
     "terms are attached for your review. This concerns your application for "
     "the Backend Engineer position."
 )
@@ -88,7 +88,7 @@ OFFER_BODY = (
 # Also invented; the employer and role are the corpus's, not a mailbox's.
 TIED_REJECTION_SUBJECT = "Important information about your application to Thorncombecross Dynamics"
 TIED_REJECTION_BODY = (
-    "Hi Ayush, Thank you for your interest in Thorncombecross Dynamics and our "
+    "Hi Ivan, Thank you for your interest in Thorncombecross Dynamics and our "
     "Systems Engineer position. As you can imagine we received many qualified "
     "applicants and some aligned better than others."
 )

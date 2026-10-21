@@ -80,7 +80,7 @@ export function MarketingNav({ wide = false }: { wide?: boolean }) {
  * owner's direction ("this is for scaling purposes, and not a project
  * anymore"). What left, and why:
  *
- *   · "built and run by Ayush Yadav" — the maker's byline is what marks a
+ *   · "built and run by Ivan Kozlov" — the maker's byline is what marks a
  *     page as a side project. The name still signs the work everywhere it
  *     should (the repo, the System Card); the footer is the product's.
  *   · the personal Gmail address — a raw mailto in a footer is a spam

@@ -219,7 +219,7 @@ test.describe("settings (via the public /demo/settings twin)", () => {
     page,
   }) => {
     await page.goto("/demo/settings");
-    const name = page.getByPlaceholder("e.g. Ayush Yadav");
+    const name = page.getByPlaceholder("e.g. Ivan Kozlov");
     await name.fill("Sam Fixture II");
     await page.getByRole("button", { name: "Save profile" }).click();
     const saved = page.getByText("Saved", { exact: true });

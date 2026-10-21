@@ -25,7 +25,7 @@ description = "Email-powered job application tracker with ML classification"
 license = "LicenseRef-Proprietary"
 requires-python = ">=3.11"
 authors = [
-    { name = "Ayush Yadav" }
+    { name = "Ivan Kozlov" }
 ]
 keywords = ["job-tracker", "email", "ml", "fastapi", "nextjs"]
 classifiers = [

@@ -889,7 +889,7 @@ _EMPLOYER_ANCHORED = re.compile(
 # shape it was added for. Measured, same sender, same employer:
 #
 #     "Thank you for applying to Verkada"            -> ('verkada', 'Verkada')
-#     "Thank you for your interest in Verkada, Ayush" -> None
+#     "Thank you for your interest in Verkada, Ivan" -> None
 #
 # The capture stays case-sensitive, which is what keeps the far more common
 # "... interest in the <Role> position at <Company>" out: ``the`` is lowercase,
@@ -903,7 +903,7 @@ _EMPLOYER_ANCHORED = re.compile(
 # `resolve_employer`, which does not run `_clean_company_display` — and the
 # subject path outranks it, so they now take the subject's cleaned form:
 #
-#     "Thank you for your interest in Granitethwaitevale Labs, Ayush"
+#     "Thank you for your interest in Granitethwaitevale Labs, Ivan"
 #         before ('granitethwaitevale', 'Granitethwaitevale Labs')
 #         after  ('granitethwaitevale', 'Granitethwaitevale')
 #
@@ -1063,7 +1063,7 @@ _INVITATION_OBJECT = r"(?:assessments?|tests?|challenges?|screenings?|exercises?
 # 3. THE CAPTURE STARTS AT A BOUNDARY — the start of the subject or immediately
 #    after punctuation. That is what handles the prefixes real mail uses:
 #    "Reminder: <Employer> invites you…", "[Action Required] <Employer> invites
-#    you…" and "Hi Ayush, <Employer> invites you…" all read the employer,
+#    you…" and "Hi Ivan, <Employer> invites you…" all read the employer,
 #    measured. A Title-Case phrase glued to the front with NO punctuation at all
 #    ("Action Required Netic AI invites you…") is still captured whole, and this
 #    residual is stated rather than hidden — it costs the TOKEN too, not only the
@@ -3114,7 +3114,7 @@ def _lead_segment_candidates(subject: str) -> list[str]:
     #     "Decision on your application | Acme"       -> Decision
     #     "Sorry for the delay in getting back to you | Acme" -> Sorry
     #     "Sarah Chen from Acme - quick chat?"        -> Sarah Chen
-    #     "Congratulations Ayush on your application | Acme" -> Congratulations Ayush
+    #     "Congratulations Ivan on your application | Acme" -> Congratulations Ivan
     #
     # every one of them at 0.95 on the AUTO-FILE path, i.e. a card on the board
     # under a name nobody chose. All five resolved to nothing before the rule was

@@ -61,7 +61,7 @@ from jobtracker.cloud.pipeline import (
 )
 
 TORC_SNIPPET = (
-    "Hi Ayush, Thank you for beginning your application process with Torc "
+    "Hi Ivan, Thank you for beginning your application process with Torc "
     "Robotics! We are excited to learn more about your interests and how your "
     "skill set will best contribute to our vision of being the"
 )

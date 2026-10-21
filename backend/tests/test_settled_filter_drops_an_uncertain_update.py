@@ -179,7 +179,7 @@ def _confirmation_named(
         thread=thread,
         subject=f"Thank you for applying to {display} ({req})",
         body=(
-            f"Hi Ayush, Thank you for applying to the Backend Engineer position at "
+            f"Hi Ivan, Thank you for applying to the Backend Engineer position at "
             f"{display} (requisition {req}). Your application has been received and "
             "is being reviewed."
         ),
@@ -201,7 +201,7 @@ def _confirmation_anonymous(display: str, token: str, thread: str, mid: str, day
         thread=thread,
         subject="Your application has been received",
         body=(
-            f"Hi Ayush, Thanks for applying to {display}. Our team will review your "
+            f"Hi Ivan, Thanks for applying to {display}. Our team will review your "
             "application shortly."
         ),
         sender=_SENDERS[token],
@@ -224,7 +224,7 @@ def _offer_named(
         thread=thread,
         subject=f"An offer from {display} ({req})",
         body=(
-            f"Hi Ayush, We are delighted to extend you an offer to join us on "
+            f"Hi Ivan, We are delighted to extend you an offer to join us on "
             f"requisition {req}. The written terms are attached for your review."
         ),
         sender=_SENDERS[token],
@@ -245,7 +245,7 @@ def _offer_anonymous(display: str, token: str, thread: str, mid: str, day: int, 
         thread=thread,
         subject=f"An offer from {display}",
         body=(
-            "Hi Ayush, We are delighted to extend you an offer to join us. The "
+            "Hi Ivan, We are delighted to extend you an offer to join us. The "
             "written terms are attached for your review."
         ),
         sender=_SENDERS[token],
@@ -268,7 +268,7 @@ def _soft_interview(
         thread=thread,
         subject=f"{display} ({req})",
         body=(
-            f"Hi Ayush, The hiring team for requisition {req} would like to speak "
+            f"Hi Ivan, The hiring team for requisition {req} would like to speak "
             "with you further. Someone will reach out to arrange a conversation."
         ),
         sender=_SENDERS[token],

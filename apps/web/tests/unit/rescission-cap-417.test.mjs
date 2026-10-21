@@ -60,7 +60,7 @@ const REFUTED_CONFIDENCE = 0.8;
 /** The offer this thread is about, quoted back by the sender's client. */
 const QUOTED_OFFER =
   "\n\nOn Tuesday, Cedarhollow Systems Talent wrote:\n" +
-  "> Hi Ayush,\n" +
+  "> Hi Ivan,\n" +
   "> We are pleased to offer you the position of Backend Engineer at\n" +
   "> Cedarhollow Systems. Your start date will be 1 September and your\n" +
   "> annual salary $145,000. Please sign and return the offer letter.\n";
@@ -68,7 +68,7 @@ const QUOTED_OFFER =
 /** The invitation the near-miss replies to. */
 const QUOTED_INVITE =
   "\n\nOn Tuesday, Cedarhollow Systems Recruiting wrote:\n" +
-  "> Hi Ayush,\n" +
+  "> Hi Ivan,\n" +
   "> We would like to invite you to interview for the Backend Engineer\n" +
   "> role. Would you be available on Thursday at 2pm for a 45 minute\n" +
   "> technical interview? Please confirm your availability and we will\n" +

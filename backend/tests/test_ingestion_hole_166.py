@@ -60,7 +60,7 @@ once" clause, and it has been removed rather than softened.
 
 Together AI fell through because of its SUBJECT
 -----------------------------------------------
-Verkada's rejection subject ("Thank you for your interest in Verkada, Ayush")
+Verkada's rejection subject ("Thank you for your interest in Verkada, Ivan")
 happens to contain an ``applied`` weak pattern, worth +2 in a subject. That +2
 is the entire difference between 0.70 and 0.60 — between the review queue and
 silence. Together AI's subject ("Important information about your application
@@ -131,9 +131,9 @@ RIPPLING = "no-reply@ats.rippling.com"
 # emails.id 113 — Verkada via Greenhouse, 2026-08-13 17:30:11.
 # 196 chars, and it ends on the word "Although", one clause short of the
 # decision. suggested_category = 'APPLIED', user_corrected = true.
-VERKADA_SUBJECT = "Thank you for your interest in Verkada, Ayush"
+VERKADA_SUBJECT = "Thank you for your interest in Verkada, Ivan"
 VERKADA_SNIPPET = (
-    "Hi Ayush, Thank you for your interest in the Embedded Software Engineer, "
+    "Hi Ivan, Thank you for your interest in the Embedded Software Engineer, "
     "Access Control opportunity. It means a lot to us that you would consider "
     "joining our mission here at Verkada. Although your"
 )
@@ -142,7 +142,7 @@ VERKADA_SNIPPET = (
 # 201 chars. suggested_category = 'APPLIED', user_corrected = true.
 SUPERNOVA_SUBJECT = "Thank You from Supernova Technology"
 SUPERNOVA_SNIPPET = (
-    "Hi Ayush, Thank you for taking the time to apply to the Junior Software "
+    "Hi Ivan, Thank you for taking the time to apply to the Junior Software "
     "Engineer role here at Supernova Technology. Please note, we have received "
     "many applications for this role and the search has been"
 )
@@ -158,14 +158,14 @@ TOGETHER_SUBJECT = (
 )
 # Shape A — the preamble runs past the snippet cut, exactly like Verkada's.
 TOGETHER_SNIPPET_PREAMBLE = (
-    "Hi Ayush, Thank you for your interest in the Systems Research Engineer, "
+    "Hi Ivan, Thank you for your interest in the Systems Research Engineer, "
     "GPU Programming opportunity. It means a lot to us that you would consider "
     "joining our mission here at Together AI. Although your"
 )
 # Shape B — the decision sentence IS inside the snippet (issue #166 quotes it).
 # The best case, and it is still not good enough.
 TOGETHER_SNIPPET_WITH_DECISION = (
-    "Hi Ayush, Thank you for your interest in Together AI. Unfortunately, we "
+    "Hi Ivan, Thank you for your interest in Together AI. Unfortunately, we "
     "decided to move forward with other candidates whose experience more "
     "closely aligns with our team's needs."
 )
@@ -251,7 +251,7 @@ def test_real_rejections_are_classified_as_confirmations(
 
     This is the assertion that validates the whole file as an instrument — it
     reproduces ``emails.suggested_category = 'APPLIED'`` as stored for rows 112
-    and 113, which is what Ayush then corrected by hand.
+    and 113, which is what Ivan then corrected by hand.
     """
     result, item = _item(subject, snippet, sender, "probe")
 
@@ -380,7 +380,7 @@ def test_the_visible_decision_sentence_now_reaches_the_board() -> None:
     This test used to be characterisation of a defect, named
     ``..._cannot_reach_the_board`` and asserting 0.70: one strong body match is
     +3, the ladder needs +6 for the 0.90 rung, so a rejection stating its
-    decision once could only ever reach the review queue. "Ayush's board cannot
+    decision once could only ever reach the review queue. "Ivan's board cannot
     be corrected by ingestion alone, however well the fetch works" is what it
     said, and it was true.
 
@@ -555,7 +555,7 @@ def test_the_floor_only_ever_routes_to_the_queue_never_to_the_board() -> None:
     review = pipeline.collect_review_items([item])
     assert [r.message_id for r in review] == ["19ff7393d56eccfb"]
     # The proposal is carried, not committed — and it is the classifier's own
-    # (wrong) guess, exactly as it is for the two rejections Ayush corrected.
+    # (wrong) guess, exactly as it is for the two rejections Ivan corrected.
     assert review[0].category == "applied"
     assert review[0].confidence < pipeline.REVIEW_FLOOR
 
@@ -625,7 +625,7 @@ def test_the_floor_does_not_swallow_the_shapes_that_must_stay_dropped() -> None:
         # The reader's own chasing mail, which is what ``follow_up`` means.
         # Both a company address and a plain one, at both ends of the gate.
         ("follow_up", 0.90, "recruiting@acme.com"),
-        ("follow_up", 0.70, "ayush@example.com"),
+        ("follow_up", 0.70, "Ivan@example.com"),
     ):
         item = pipeline.PipelineItem(
             message_id=f"drop-{category}-{confidence}-{sender}",
@@ -689,7 +689,7 @@ def test_an_other_verdict_is_queued_only_when_it_speaks_about_your_application()
     alert = item(
         "job-alert",
         "New roles at Together AI this week",
-        "Hi Ayush, here are the latest openings at Together AI: Systems "
+        "Hi Ivan, here are the latest openings at Together AI: Systems "
         "Research Engineer, and several more on our careers page. Set up an "
         "alert to hear about new roles first.",
     )
@@ -778,7 +778,7 @@ def test_two_list_entries_became_load_bearing_under_anchoring() -> None:
     pass could have deleted either without a test noticing. Under anchoring
     neither is redundant — ``myworkday.com`` does not end in ``.workday.com`` —
     and deleting one silently stops recognising a relay production really uses
-    (``us.greenhouse-mail.io`` is the sender on Ayush's own Greenhouse mail).
+    (``us.greenhouse-mail.io`` is the sender on Ivan's own Greenhouse mail).
     """
     from jobtracker.classifier.rules import ATS_DOMAINS, is_ats_sender
 
@@ -850,7 +850,7 @@ def test_a_lookalike_sender_cannot_reach_the_review_queue() -> None:
 
     The exact message the ATS floor is FOR — Together AI's shape, ``applied`` at
     0.60, under ``REVIEW_FLOOR`` — but relayed by a host that merely contains an
-    ATS name. Before #260 the floor caught it and it landed in Ayush's queue;
+    ATS name. Before #260 the floor caught it and it landed in Ivan's queue;
     the queue is a human's attention, and filling it from a domain anyone can
     register is how a safety net becomes spam.
     """
@@ -1055,8 +1055,8 @@ def test_the_employers_possessive_is_not_part_of_the_job_title() -> None:
     Engineer" were two applications. The title here is 17 characters: this was
     never about length.
     """
-    confirmation = "Hi Ayush, Thank you for applying to Northwind Analytics's Frontend Engineer position!"
-    rejection = "Hi Ayush, Thank you so much for taking the time to apply for the Frontend Engineer opening at Northwind Analytics."
+    confirmation = "Hi Ivan, Thank you for applying to Northwind Analytics's Frontend Engineer position!"
+    rejection = "Hi Ivan, Thank you so much for taking the time to apply for the Frontend Engineer opening at Northwind Analytics."
 
     a = pipeline.role_from_message("Thank you for applying", confirmation)
     b = pipeline.role_from_message("Important information", rejection)
@@ -1079,7 +1079,7 @@ def test_a_parenthesised_title_still_yields_a_role() -> None:
     and no role does not join its own rejection, which carries a role and no id.
     """
     text = (
-        "Hi Ayush, Thank you for taking the time to submit your application for "
+        "Hi Ivan, Thank you for taking the time to submit your application for "
         f"{LONG_TITLE} (Job number: 200045485)."
     )
     assert pipeline.role_from_message("Thank you for your application!", text) == LONG_TITLE
@@ -1088,7 +1088,7 @@ def test_a_parenthesised_title_still_yields_a_role() -> None:
 def test_the_requisition_label_is_still_what_ends_the_title() -> None:
     """The control: an unlabelled parenthesis must not terminate the capture,
     and a plain title must be unaffected."""
-    plain = "Hi Ayush, submit your application for Software Engineer II (Job number: 200045485)."
+    plain = "Hi Ivan, submit your application for Software Engineer II (Job number: 200045485)."
     assert pipeline.role_from_message("Thanks", plain) == "Software Engineer II"
 
 
@@ -1113,7 +1113,7 @@ def test_the_requisition_id_does_not_spend_the_titles_width() -> None:
     title = "Software Development Engineer I - AI/ML Network Infrastructure, Annapurna Labs"
     assert len(title) == 78
     body = (
-        "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We've received your "
+        "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We've received your "
         f"application for the {title} (ID: 10475660) position. What happens next?"
     )
     assert pipeline.role_from_message("Thank you for Applying to Amazon!", body) == title
@@ -1128,7 +1128,7 @@ def test_the_same_title_without_a_requisition_is_unchanged() -> None:
     """
     title = "Software Development Engineer I - AI/ML Network Infrastructure, Annapurna Labs"
     body = (
-        "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We've received your "
+        "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We've received your "
         f"application for the {title} position. What happens next?"
     )
     assert pipeline.role_from_message("Thank you for Applying to Amazon!", body) == title
@@ -1144,7 +1144,7 @@ def test_an_unlabelled_parenthesis_still_belongs_to_the_title() -> None:
     (Graduation Date: Fall 2025-Summer 2026)" is one.
     """
     body = (
-        "Hi Ayush, Thanks for applying! We have received your application for the "
+        "Hi Ivan, Thanks for applying! We have received your application for the "
         "Backend Engineer (R-40001) position."
     )
     assert (

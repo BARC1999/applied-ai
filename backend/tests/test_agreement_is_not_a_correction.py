@@ -58,11 +58,11 @@ OWNER = "aaaaaaaa-1111-2222-3333-555555555555"
 # CORRECTLY at 0.75 and could not act on. It is parked: ``classified_as`` is the
 # typed null and the real proposal rides in ``suggested_category``.
 PALANTIR_SUBJECT = (
-    "Thank you from Palantir Technologies - Ayush Yadav - Software Engineer, New Grad"
+    "Thank you from Palantir Technologies - Ivan Kozlov - Software Engineer, New Grad"
 )
 PALANTIR_SENDER = "no-reply@hire.lever.co"
 PALANTIR_SNIPPET = (
-    "Dear Ayush, Thank you for your interest in Palantir. After careful "
+    "Dear Ivan, Thank you for your interest in Palantir. After careful "
     "consideration, we regret to inform you that we will not be proceeding "
     "with your candidacy for this role at this time. Please note that"
 )

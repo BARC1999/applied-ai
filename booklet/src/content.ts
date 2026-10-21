@@ -34,7 +34,7 @@ export const BRAND = {
   wordmarkHead: "App",
   wordmarkTail: "lied",
   subtitle: "The inbox already holds the verdict. Classify it at the source.",
-  author: "Ayush Yadav",
+  author: "Ivan Kozlov",
   year: "2026",
   liveUrl: "getapplied.vercel.app",
   qrTarget: "https://getapplied.vercel.app",
@@ -122,7 +122,7 @@ export const TOC = {
     { term: "ONNX", def: "portable model format; runs via WASM." },
   ],
   colophon: [
-    "© 2026 · Ayush Yadav",
+    "© 2026 · Ivan Kozlov",
     "Applied · System Card Vol. 01",
     // Kept on two lines: the right-aligned mono column is ~29ch wide, and the
     // single-line form wrapped with "RESERVED" orphaned on a fourth line.
@@ -694,7 +694,7 @@ export const BACK_COVER = {
   signature: "System Card · Vol. 01",
   colophon: [
     "Applied · System Card · Vol. 01",
-    "Ayush Yadav · 2026 · all rights reserved",
+    "Ivan Kozlov · 2026 · all rights reserved",
     "Applied is proprietary · classify at the source",
   ],
 } as const;

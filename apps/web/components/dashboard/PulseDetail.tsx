@@ -32,7 +32,7 @@ import { cn } from "@/lib/utils";
  * The one verb, everywhere: every drawn unit — a day bar, an age bin, a
  * provenance group, a named row — is a control that narrows the WORKLIST to
  * the rows it counts (`onFilter`), and filtering closes the panel because the
- * narrowed list is the answer. That verb is what Ayush's "more detailed
+ * narrowed list is the answer. That verb is what Ivan's "more detailed
  * analysis" cashes out to: not more prose about the rows, the rows.
  *
  * Geometry safety, stated because it is load-bearing: `max-h-80` +
@@ -514,7 +514,7 @@ export function PulseDetail({
                 color: i >= days.length - daysElapsed ? "var(--viz-rules)" : "var(--text-dim)",
                 name: date ? `${dayName(date)} — ${count} filed` : `${count} filed`,
                 tip: momentumTip(date, count),
-                // A breath before each Monday: the weekday structure Ayush
+                // A breath before each Monday: the weekday structure Ivan
                 // asked the daily view for, drawn as space.
                 gapBefore: date !== null && i > 0 && weekdayOf(date) === 0,
                 onSelect:

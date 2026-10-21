@@ -55,7 +55,7 @@ const BETA_MAILTO_SUBJECT = "Applied beta access request";
  * OAuth consent screen.
  */
 const BETA_MAILTO_BODY = [
-  "Hi Ayush,",
+  "Hi Ivan,",
   "",
   "I'd like to be added to the Applied Gmail beta (the 100 test-user group).",
   "The Google account I'd connect read-only is:",

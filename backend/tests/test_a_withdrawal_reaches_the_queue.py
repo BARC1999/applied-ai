@@ -119,7 +119,7 @@ def _offer_body(display: str) -> str:
     """
 
     return (
-        f"Hi Ayush, I am pleased to offer you the position of Backend Engineer at "
+        f"Hi Ivan, I am pleased to offer you the position of Backend Engineer at "
         f"{display}. Please find the formal offer letter attached with details of "
         "compensation and your proposed start date. We would like you to join us."
     )
@@ -129,7 +129,7 @@ def _withdrawal_body(display: str) -> str:
     """The long form. Its own text carries the retraction; nothing is quoted."""
 
     return (
-        "Hi Ayush, I am writing with difficult news about the Backend Engineer "
+        "Hi Ivan, I am writing with difficult news about the Backend Engineer "
         "position. Following a change to our headcount plan this quarter, we must "
         f"withdraw the offer we extended to you last week at {display}. This "
         "decision is not a reflection of your interview performance, which the "
@@ -493,7 +493,7 @@ def test_n5_conditional_and_candidate_authored_stay_dropped() -> None:
         mid="n5-conditional",
         subject="Regarding your offer - Kelvedon",
         body=(
-            "Hi Ayush, A note on process. If the offer were withdrawn for any "
+            "Hi Ivan, A note on process. If the offer were withdrawn for any "
             "reason, our policy is to give you two weeks notice in writing. "
             "Nothing has changed and we are excited for you to join us."
         ),
@@ -540,7 +540,7 @@ def test_n5_a_negated_retraction_is_admitted_and_that_is_a_known_cost() -> None:
         mid="n5-negated",
         subject="Regarding your offer - Kelvedon",
         body=(
-            "Hi Ayush, To clear up the confusion from this morning: we will not "
+            "Hi Ivan, To clear up the confusion from this morning: we will not "
             "be withdrawing the offer we extended to you. It stands exactly as "
             "written and we look forward to hearing your answer this week."
         ),

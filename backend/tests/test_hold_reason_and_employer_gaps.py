@@ -39,7 +39,7 @@ ASHBY = "no-reply@ashbyhq.com"
 @pytest.mark.parametrize(
     "subject, expected",
     [
-        ("Thank you for your interest in Verkada, Ayush", "Verkada"),
+        ("Thank you for your interest in Verkada, Ivan", "Verkada"),
         ("Thanks for your interest in Stripe", "Stripe"),
         ("Thank you so much for your interest in Anthropic", "Anthropic"),
         # The phrase and a role in one subject: the role must not become the

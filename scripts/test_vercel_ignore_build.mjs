@@ -863,7 +863,7 @@ test('with no remote at all, the default branch is fetched by URL', () => {
   const repo = scratchRepo({ withOriginMain: false });
   try {
     const got = firstPreview(repo, 'web', repo.heads.webOnly, {
-      VERCEL_GIT_REPO_OWNER: 'yadava5',
+      VERCEL_GIT_REPO_OWNER: 'Kozlova5',
       VERCEL_GIT_REPO_SLUG: 'applied',
     });
     assert.equal(got.verdict, BUILD, `an unresolved base must build:\n${got.stderr}`);

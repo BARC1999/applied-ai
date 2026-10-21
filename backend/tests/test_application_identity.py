@@ -57,7 +57,7 @@ def amazon(message_id: str, role: str, req: str, minutes: int = 0) -> p.Pipeline
         message_id,
         AMAZON_SUBJECT,
         AMAZON_SENDER,
-        f"Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We&#39;ve received "
+        f"Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We&#39;ve received "
         f"your application for the {role} (ID: {req}) position. What happens next?",
         thread_id="19fee99ce7d5feb8",
         minutes=minutes,
@@ -111,7 +111,7 @@ def test_amazon_follow_up_naming_only_the_requisition_joins_its_own_row():
         "a5",
         "Keep track of your application",
         AMAZON_SENDER,
-        "Amazon.jobs Hi Ayush, Thank you for your interest in Software Development "
+        "Amazon.jobs Hi Ivan, Thank you for your interest in Software Development "
         "Engineer – Database 2026 (US) (ID: 3130865). If you have completed the application:",
         thread_id="19fedfd7036353f4",  # a DIFFERENT Gmail thread
         minutes=90,
@@ -137,14 +137,14 @@ def test_roblox_verification_mail_does_not_mint_a_second_application():
         "r1",
         "Thank you for applying to Roblox!",
         "no-reply@roblox.com",
-        "Early Career Talent Hi Ayush, Thank you for applying to Roblox! We received "
+        "Early Career Talent Hi Ivan, Thank you for applying to Roblox! We received "
         "your application for the [2027] Software Engineer, Early Career role",
     )
     verification = item(
         "r2",
         "[Action Required] Your Roblox Application",
         "assessment@email.roblox.com",
-        "Email Verification Hi Ayush, Thank you for submitting your application for a "
+        "Email Verification Hi Ivan, Thank you for submitting your application for a "
         "position at Roblox! Please click here to verify your email address",
         minutes=1,
     )
@@ -195,14 +195,14 @@ def test_two_differently_worded_acknowledgements_are_one_application():
         "s1",
         "Thanks for applying to Supabase",
         "no-reply@ashbyhq.com",
-        "Hi Ayush, Thanks for applying to Supabase. We&#39;re really glad you&#39;re "
+        "Hi Ivan, Thanks for applying to Supabase. We&#39;re really glad you&#39;re "
         "interested in what we&#39;re building.",
     )
     second = item(
         "s2",
         "Thank you for applying to Supabase!",
         "no-reply@ashbyhq.com",
-        "Hey Ayush, Thanks for your interest in a role with Supabase; we confirm your "
+        "Hey Ivan, Thanks for your interest in a role with Supabase; we confirm your "
         "application has been received.",
         minutes=120,
     )
@@ -234,7 +234,7 @@ def test_the_same_acknowledgement_twice_is_two_applications():
             f"g{k}",
             "Thanks for applying to Google",
             "noreply@google.com",
-            "Hi Ayush Yadav, Thanks for applying to Google! There are a ton of great "
+            "Hi Ivan Kozlov, Thanks for applying to Google! There are a ton of great "
             "companies out there, so we appreciate your interest in joining our team.",
             minutes=minutes,
         )
@@ -266,7 +266,7 @@ def test_the_same_acknowledgement_twice_within_the_window_is_still_two():
             f"t{k}",
             "Thank you for applying to Torc Robotics!",
             "no-reply@torc.ai",
-            "Hi Ayush, Thank you for beginning your application process with Torc "
+            "Hi Ivan, Thank you for beginning your application process with Torc "
             "Robotics! We are excited to learn more about your interests.",
             minutes=k * 20,
         )
@@ -291,14 +291,14 @@ def test_two_templates_far_apart_are_two_applications():
         "w1",
         "Thanks for applying to Northwind Analytics",
         "no-reply@ashbyhq.com",
-        "Hi Ayush, Thanks for applying to Northwind Analytics. We review every "
+        "Hi Ivan, Thanks for applying to Northwind Analytics. We review every "
         "application carefully.",
     )
     late = item(
         "w2",
         "Thank you for applying to Northwind Analytics!",
         "no-reply@ashbyhq.com",
-        "Hey Ayush, Thanks for your interest in a role with Northwind Analytics; we "
+        "Hey Ivan, Thanks for your interest in a role with Northwind Analytics; we "
         "confirm your application has been received.",
         minutes=30 * 24 * 60,
     )
@@ -330,14 +330,14 @@ def test_an_outstanding_step_is_not_a_second_application():
         "n1",
         "Thank you for applying to Northwind",
         "no-reply@us.greenhouse-mail.io",
-        "Hi Ayush, thank you for applying to Northwind. Our team will review "
+        "Hi Ivan, thank you for applying to Northwind. Our team will review "
         "your application.",
     )
     unfinished = item(
         "n2",
         "Complete your application to Northwind",
         "no-reply@us.greenhouse-mail.io",
-        "Hi Ayush, you started an application with Northwind. Please complete "
+        "Hi Ivan, you started an application with Northwind. Please complete "
         "your application to be considered.",
         category="pending_application",
         confidence=0.90,
@@ -369,7 +369,7 @@ def test_an_outstanding_step_alone_still_gets_its_own_card():
         "u1",
         "Complete your application to Cedar Labs",
         "no-reply@us.greenhouse-mail.io",
-        "Hi Ayush, you started an application with Cedar Labs. Please complete "
+        "Hi Ivan, you started an application with Cedar Labs. Please complete "
         "your application to be considered.",
         category="pending_application",
         confidence=0.90,
@@ -396,7 +396,7 @@ def test_one_role_less_confirmation_still_keeps_exactly_one_row():
         "t1",
         "Thank you for applying to Together AI",
         "no-reply@us.greenhouse-mail.io",
-        "Hi Ayush, thank you for applying to Together AI. Our team will review "
+        "Hi Ivan, thank you for applying to Together AI. Our team will review "
         "your application.",
     )
     rejection = item(
@@ -451,7 +451,7 @@ def test_a_rejection_naming_no_role_is_asked_about_not_guessed():
         "a7",
         "Update on your Amazon application",
         AMAZON_SENDER,
-        "Hi Ayush, Thank you for your interest in Amazon. After careful consideration "
+        "Hi Ivan, Thank you for your interest in Amazon. After careful consideration "
         "we will not be moving forward at this time.",
         category="rejection",
         minutes=300,
@@ -481,14 +481,14 @@ def test_a_role_less_rejection_at_a_single_application_employer_still_settles_it
         "c1",
         "Thank you for applying to DoorDash",
         "no-reply@doordash.com",
-        "Hi Ayush, Thank you for applying to DoorDash&#39;s Software Engineer I, "
+        "Hi Ivan, Thank you for applying to DoorDash&#39;s Software Engineer I, "
         "Entry-Level position! We&#39;ve received your application",
     )
     rejection = item(
         "c2",
         "Update on your application",
         "no-reply@doordash.com",
-        "Hi Ayush, we have decided not to move forward.",
+        "Hi Ivan, we have decided not to move forward.",
         category="rejection",
         minutes=500,
     )
@@ -508,31 +508,31 @@ def test_a_role_less_rejection_at_a_single_application_employer_still_settles_it
     [
         (
             "Crusoe | Application Received",
-            "Hi Ayush, Thank you for applying to our role: Software Engineer I, Storage. "
+            "Hi Ivan, Thank you for applying to our role: Software Engineer I, Storage. "
             "We appreciate your interest in joining the team!",
             "Software Engineer I, Storage",
         ),
         (
             "Thank you for applying to DoorDash",
-            "Hi Ayush, Thank you for applying to DoorDash&#39;s Software Engineer I, "
+            "Hi Ivan, Thank you for applying to DoorDash&#39;s Software Engineer I, "
             "Entry-Level (Graduation Date: Fall 2025-Summer 2026) position!",
             "Software Engineer I, Entry-Level (Graduation Date: Fall 2025-Summer 2026)",
         ),
         (
             "Thank you for applying to Anthropic",
-            "Hi Ayush, We appreciate you taking the time to submit an application for the "
+            "Hi Ivan, We appreciate you taking the time to submit an application for the "
             "TPU Kernel Engineer position, and are delighted",
             "TPU Kernel Engineer",
         ),
         (
             "Thank you for applying with MotherDuck!",
-            "Hi Ayush, Thank you for your interest in joining the flock here at MotherDuck. "
+            "Hi Ivan, Thank you for your interest in joining the flock here at MotherDuck. "
             "We appreciate your interest in the Software Engineer - Database position.",
             "Software Engineer - Database",
         ),
         (
             "Thanks for applying to Cursor!",
-            "Hi Ayush, Thank you for applying for the Software Engineer, Model Routing "
+            "Hi Ivan, Thank you for applying for the Software Engineer, Model Routing "
             "&amp; Inference role at Cursor!",
             "Software Engineer, Model Routing & Inference",
         ),
@@ -541,14 +541,14 @@ def test_a_role_less_rejection_at_a_single_application_employer_still_settles_it
         # "interest in the Software Engineer, C#".
         (
             "Path Robotics update",
-            "Dear Ayush, Thank you for your interest in the Software Engineer, C# "
+            "Dear Ivan, Thank you for your interest in the Software Engineer, C# "
             "position at Path Robotics. We have successfully received your online application.",
             "Software Engineer, C#",
         ),
         # Names no role anywhere. Must stay None rather than become a guess.
         (
             "Thank you for applying to Twitch",
-            "Ayush, Thanks for applying to Twitch. Your application has been received "
+            "Ivan, Thanks for applying to Twitch. Your application has been received "
             "and we will review it right away.",
             None,
         ),
@@ -750,7 +750,7 @@ def test_a_response_that_names_no_role_still_answers_the_whole_company():
         "f4",
         "Update on your application",
         AMAZON_SENDER,
-        "Hi Ayush, we have an update for you.",
+        "Hi Ivan, we have an update for you.",
         category="rejection",
         minutes=60,
     )
@@ -1053,7 +1053,7 @@ def amazon_mail(message_id: str, role: str, req: str, minutes: int, **kw) -> Ema
     return mail(
         message_id,
         AMAZON_SUBJECT,
-        f"Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We&#39;ve received your "
+        f"Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We&#39;ve received your "
         f"application for the {role} (ID: {req}) position. What ha",
         minutes=minutes,
         **kw,
@@ -1090,8 +1090,8 @@ def test_a_row_whose_mail_names_one_application_offers_no_split():
     assert (
         apps.cluster_stored_mail(
             [
-                mail("s1", "Thanks for applying to Supabase", "Hi Ayush, Thanks for applying to Supabase."),
-                mail("s2", "Thank you for applying to Supabase!", "Hey Ayush, we confirm your application."),
+                mail("s1", "Thanks for applying to Supabase", "Hi Ivan, Thanks for applying to Supabase."),
+                mail("s2", "Thank you for applying to Supabase!", "Hey Ivan, we confirm your application."),
             ]
         )
         == []
@@ -1105,7 +1105,7 @@ def test_mail_that_names_no_role_stays_with_the_retained_row():
         [
             amazon_mail("m1", "Software Development Engineer - 2026 (US)", "3177934", 0),
             amazon_mail("m2", "Software Development Engineer – Database 2026 (US)", "3130865", 5),
-            mail("m3", "Update on your Amazon application", "Hi Ayush, we have an update.", minutes=90),
+            mail("m3", "Update on your Amazon application", "Hi Ivan, we have an update.", minutes=90),
         ]
     )
 
@@ -1144,10 +1144,10 @@ def test_snippets_are_decoded_before_they_are_stored():
     then also what role extraction compares.
     """
 
-    raw = "Hi Ayush, Thanks for applying to Supabase. We&#39;re glad you&#39;re interested &amp; excited."
+    raw = "Hi Ivan, Thanks for applying to Supabase. We&#39;re glad you&#39;re interested &amp; excited."
 
     assert p.unescape_entities(raw) == (
-        "Hi Ayush, Thanks for applying to Supabase. We're glad you're interested & excited."
+        "Hi Ivan, Thanks for applying to Supabase. We're glad you're interested & excited."
     )
     # Numeric and named forms beyond the handful that happened to show up.
     assert p.unescape_entities("caf&eacute; &mdash; 5&nbsp;PM &#8212; &hellip;") == (
@@ -1162,7 +1162,7 @@ def test_a_role_extracted_from_a_decoded_snippet_is_unchanged():
     """Decoding at write time must not change what the extractor already found."""
 
     escaped = (
-        "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! We&#39;ve received your "
+        "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! We&#39;ve received your "
         "application for the Software Development Engineer - 2026 (US) (ID: 3177934) position."
     )
     decoded = p.unescape_entities(escaped)
@@ -1672,7 +1672,7 @@ async def test_an_employer_the_mail_names_itself_is_never_second_guessed(test_se
 
 SIMPLISAFE_SUBJECT = "Important information about your application to SimpliSafe"
 SIMPLISAFE_REJECTION = (
-    "Hi Ayush, Thank you for your interest in SimpliSafe and our Software "
+    "Hi Ivan, Thank you for your interest in SimpliSafe and our Software "
     "Engineer I- User Systems position. We have carefully reviewed your "
     "application."
 )

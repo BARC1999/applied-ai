@@ -50,7 +50,7 @@ LAYER_BLURB = {
 EXAMPLES = [
     [
         "Interview availability — Software Engineer, Platform",
-        "Hi Ayush, thanks for applying. We'd like to schedule a 45-minute technical interview next week. Could you share your availability on Tuesday or Wednesday?",
+        "Hi Ivan, thanks for applying. We'd like to schedule a 45-minute technical interview next week. Could you share your availability on Tuesday or Wednesday?",
     ],
     [
         "Your application was received",

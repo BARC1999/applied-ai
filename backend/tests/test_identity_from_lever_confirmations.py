@@ -17,7 +17,7 @@ THIS FILE IS PALANTIR'S HALF. Its confirmation arrives from
 the ~200 characters the stored snippet holds, so the extractor READ the words
 and returned None anyway:
 
-    Hi Ayush, Thank you for submitting your application to be a Software
+    Hi Ivan, Thank you for submitting your application to be a Software
     Engineer, New Grad at Palantir. Our team is reviewing your application...
 
 None of the four existing ``_ROLE_BODY_PATTERNS`` can see it. There is no
@@ -93,7 +93,7 @@ def _lever_item(
 # The real message, as it arrives. Gmail's snippet is ~200 characters and this
 # is what it holds; the title is inside it.
 PALANTIR_CONFIRMATION = (
-    "Hi Ayush, Thank you for submitting your application to be a Software "
+    "Hi Ivan, Thank you for submitting your application to be a Software "
     "Engineer, New Grad at Palantir. Our team is reviewing your application "
     "and will be in touch if we think you're a potential match"
 )
@@ -102,7 +102,7 @@ PALANTIR_CONFIRMATION = (
 # older patterns already read — from the SUBJECT — and the two have to agree or
 # the rejection opens a second card instead of closing the first.
 PALANTIR_REJECTION_SUBJECT = (
-    "Thank you from Palantir Technologies - Ayush Yadav - Software Engineer, New Grad"
+    "Thank you from Palantir Technologies - Ivan Kozlov - Software Engineer, New Grad"
 )
 
 
@@ -149,7 +149,7 @@ def test_the_confirmation_and_its_rejection_stay_one_application() -> None:
         "m2",
         "1a001b68983e59a3",
         PALANTIR_REJECTION_SUBJECT,
-        "Dear Ayush, Thank you for your interest in Palantir. After careful "
+        "Dear Ivan, Thank you for your interest in Palantir. After careful "
         "consideration, we regret to inform you that we will not be proceeding "
         "with your candidacy for this role at this time.",
         "rejection",

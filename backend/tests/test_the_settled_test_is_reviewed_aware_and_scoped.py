@@ -69,14 +69,14 @@ ATS = ATS_SENDERS[0]
 #: `role_from_message` finds nothing, so its dedup key is ``(thread, None)``.
 ACK = (
     f"{DISPLAY} | Application Received",
-    f"Hi Ayush, Thank you for applying to {DISPLAY}. We have received your "
+    f"Hi Ivan, Thank you for applying to {DISPLAY}. We have received your "
     f"submission and our team will review it shortly.",
 )
 #: Uncertain, names no job. `other` at 0.50, floored into the queue by
 #: `references_an_application` because a known ATS relayed it. Same key.
 UPDATE = (
     f"Your {DISPLAY} application",
-    "Hi Ayush, We have an update to share about your application. Please "
+    "Hi Ivan, We have an update to share about your application. Please "
     "look out for a further message from the hiring team.",
 )
 

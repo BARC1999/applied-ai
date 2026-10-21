@@ -588,16 +588,16 @@ def _confirmations(b: _Builder, n: int) -> None:
 
     templates = (
         ("Thank you for applying to {e}",
-         "Hi Ayush, Thank you for applying to the {r} position at {e}. "
+         "Hi Ivan, Thank you for applying to the {r} position at {e}. "
          "Your application has been received and our team will review it shortly."),
         ("Your application to {e}",
-         "Hello Ayush, We have received your application for the {r} role at {e}. "
+         "Hello Ivan, We have received your application for the {r} role at {e}. "
          "We review every application carefully and will be in touch if there is a fit."),
         ("{e} | Application Received",
-         "Hi Ayush, Thank you for applying to our role: {r}. We appreciate your "
+         "Hi Ivan, Thank you for applying to our role: {r}. We appreciate your "
          "interest in joining the team and will review your application shortly."),
         ("Thanks for applying to {e}!",
-         "Hi Ayush, Thanks for your interest in the {r} opening at {e}. "
+         "Hi Ivan, Thanks for your interest in the {r} opening at {e}. "
          "We have received your application and will be reviewing it this week."),
     )
     for i in range(n):
@@ -621,13 +621,13 @@ def _rejections_plain(b: _Builder, n: int) -> None:
 
     templates = (
         ("Update on your application to {e}",
-         "Hi Ayush, After careful consideration we have decided not to move forward "
+         "Hi Ivan, After careful consideration we have decided not to move forward "
          "with your application for the {r} role at {e}. We appreciate your interest."),
         ("Your {e} application",
-         "Hello Ayush, Unfortunately we will not be moving forward with your "
+         "Hello Ivan, Unfortunately we will not be moving forward with your "
          "candidacy for the {r} position. We wish you the very best in your search."),
         ("Thank you from {e}",
-         "Dear Ayush, We regret to inform you that we have decided to proceed with "
+         "Dear Ivan, We regret to inform you that we have decided to proceed with "
          "other candidates for the {r} role. Thank you for the time you invested."),
     )
     for i in range(n):
@@ -641,7 +641,7 @@ def _rejections_plain(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Recruiting",
             body=(
-                f"Hi Ayush, Thank you for applying to the {role} position at "
+                f"Hi Ivan, Thank you for applying to the {role} position at "
                 f"{display}. We have received your application."
             ),
             expected_category="applied",
@@ -689,14 +689,14 @@ def _rejections_past_the_snippet(b: _Builder, n: int) -> None:
         body = b.pick(
             (
                 # Together AI, thread 19ff7393d56eccfb.
-                f"Hi Ayush, Thank you so much for taking the time to apply for "
+                f"Hi Ivan, Thank you so much for taking the time to apply for "
                 f"the {role} opening at {display}. We know a lot of thought and "
                 f"consideration went into your application, and the team "
                 f"genuinely appreciates your interest in what we are building "
                 f"here. After careful review we have decided not to move forward "
                 f"with your candidacy at this time. We wish you the very best.",
                 # Verkada, thread 19ffc2cae1b51518.
-                f"Hi Ayush, Thank you for your interest in the {role} "
+                f"Hi Ivan, Thank you for your interest in the {role} "
                 f"opportunity. It means a lot to us that you would consider "
                 f"joining our mission here at {display}, and we were glad to "
                 f"spend time with what you sent us. Although your background is "
@@ -710,7 +710,7 @@ def _rejections_past_the_snippet(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=None,
             body=(
-                f"Hi Ayush, Thank you for applying to the {role} position at "
+                f"Hi Ivan, Thank you for applying to the {role} position at "
                 f"{display}. Your application has been received."
             ),
             expected_category="applied",
@@ -743,7 +743,7 @@ def _interviews(b: _Builder, n: int) -> None:
             subject=f"Thank you for applying to {display}",
             sender=b.ats(i),
             sender_name=f"{display} Talent",
-            body=f"Hi Ayush, We have received your application for the {role} role at {display}.",
+            body=f"Hi Ivan, We have received your application for the {role} role at {display}.",
             expected_category="applied",
             identity=f"{token}|{role}",
             employer=token,
@@ -755,7 +755,7 @@ def _interviews(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Talent",
             body=(
-                f"Hi Ayush, We would like to schedule an interview with you for the "
+                f"Hi Ivan, We would like to schedule an interview with you for the "
                 f"{role} position. Please use the link below to pick a time that works."
             ),
             expected_category="interview",
@@ -774,7 +774,7 @@ def _assessments(b: _Builder, n: int) -> None:
             subject=f"Thank you for applying to {display}",
             sender=b.ats(i),
             sender_name=f"{display} Talent",
-            body=f"Hi Ayush, Thank you for applying to the {role} position at {display}.",
+            body=f"Hi Ivan, Thank you for applying to the {role} position at {display}.",
             expected_category="applied",
             identity=f"{token}|{role}",
             employer=token,
@@ -786,7 +786,7 @@ def _assessments(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Talent",
             body=(
-                "Hi Ayush, The next step is a short online assessment. Please "
+                "Hi Ivan, The next step is a short online assessment. Please "
                 "complete the coding exercise linked below within five days."
             ),
             expected_category="assessment",
@@ -805,7 +805,7 @@ def _offers(b: _Builder, n: int) -> None:
             subject=f"Thank you for applying to {display}",
             sender=b.ats(i),
             sender_name=f"{display} Talent",
-            body=f"Hi Ayush, Thank you for applying to the {role} position at {display}.",
+            body=f"Hi Ivan, Thank you for applying to the {role} position at {display}.",
             expected_category="applied",
             identity=f"{token}|{role}",
             employer=token,
@@ -817,7 +817,7 @@ def _offers(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Talent",
             body=(
-                f"Hi Ayush, We are delighted to extend you an offer to join {display} "
+                f"Hi Ivan, We are delighted to extend you an offer to join {display} "
                 f"as a {role}. The written offer is attached and we are thrilled at "
                 "the prospect of you joining the team."
             ),
@@ -870,12 +870,12 @@ def _rescinded_offers(b: _Builder, n: int) -> None:
     """
 
     withdrawals = (
-        "Hi Ayush, I am writing with difficult news. Due to a change in headcount "
+        "Hi Ivan, I am writing with difficult news. Due to a change in headcount "
         "we have had to withdraw the offer for this position. I am very sorry to "
         "be sending this and I know it is disruptive.",
-        "Hi Ayush, Unfortunately the role has been put on hold and we are no longer "
+        "Hi Ivan, Unfortunately the role has been put on hold and we are no longer "
         "able to proceed with the offer we sent last week. We are truly sorry.",
-        "Hello Ayush, Following a company-wide hiring freeze announced this morning, "
+        "Hello Ivan, Following a company-wide hiring freeze announced this morning, "
         "we must rescind the offer extended to you. This is not a reflection of your "
         "candidacy and we are sorry for the disruption.",
     )
@@ -889,7 +889,7 @@ def _rescinded_offers(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Talent",
             body=(
-                f"Hi Ayush, We are delighted to extend you an offer to join {display} "
+                f"Hi Ivan, We are delighted to extend you an offer to join {display} "
                 f"as a {role}. We are thrilled at the prospect of you joining the team."
             ),
             expected_category="offer",
@@ -908,7 +908,7 @@ def _rescinded_offers(b: _Builder, n: int) -> None:
             body=(
                 f"{withdrawal}\n\n"
                 f"On Monday, {display} Talent wrote:\n"
-                f"> Hi Ayush, We are delighted to extend you an offer to join\n"
+                f"> Hi Ivan, We are delighted to extend you an offer to join\n"
                 f"> {display} as a {role}. We are thrilled at the prospect of\n"
                 f"> you joining the team.\n"
             ),
@@ -946,7 +946,7 @@ def _quoted_history(b: _Builder, n: int) -> None:
             subject=f"Thank you for applying to {display}",
             sender=b.ats(i),
             sender_name=f"{display} Recruiting",
-            body=f"Hi Ayush, Thank you for applying to the {role} position at {display}.",
+            body=f"Hi Ivan, Thank you for applying to the {role} position at {display}.",
             expected_category="applied",
             identity=f"{token}|{role}",
             employer=token,
@@ -968,10 +968,10 @@ def _quoted_history(b: _Builder, n: int) -> None:
                 # wording rather than the defect -- 200 of 400 "wrong" at every
                 # seed, with the quote-strip this family exists to test never
                 # reached. See #878.
-                "Hi Ayush, Following up on the below — we would like to set up a "
+                "Hi Ivan, Following up on the below — we would like to set up a "
                 "conversation with you next week. Are you free Thursday?\n\n"
                 f"On Tuesday, {display} Recruiting wrote:\n"
-                f"> Hi Ayush, Thank you for applying to the {role} position at\n"
+                f"> Hi Ivan, Thank you for applying to the {role} position at\n"
                 f"> {display}. Your application has been received.\n"
             ),
             expected_category="interview",
@@ -1006,7 +1006,7 @@ def _conditional_explainers(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Careers",
             body=(
-                f"Hi Ayush, Thank you for taking the time to submit your application "
+                f"Hi Ivan, Thank you for taking the time to submit your application "
                 f"for {role} at {display}. We are glad you are interested in a career "
                 "here. If you are not selected for the role, your profile will remain "
                 "on file and our recruiters may contact you about other openings.",
@@ -1024,7 +1024,7 @@ def _conditional_explainers(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Careers",
             body=(
-                f"Hi Ayush, Thank you for your interest in {display}. You were not "
+                f"Hi Ivan, Thank you for your interest in {display}. You were not "
                 f"selected for the {role} role. Your profile will remain on file."
             ),
             expected_category="rejection",
@@ -1053,7 +1053,7 @@ def _verdict_past_the_body_cap(b: _Builder, n: int) -> None:
         display, token = b.employer()
         role = b.role(i)
         body = (
-            f"Hi Ayush, Thank you for your continued interest in {display}. "
+            f"Hi Ivan, Thank you for your continued interest in {display}. "
             + filler * 40
             + f"After careful consideration we are not moving forward with your "
             f"application for the {role} role."
@@ -1063,7 +1063,7 @@ def _verdict_past_the_body_cap(b: _Builder, n: int) -> None:
             subject=f"Thank you for applying to {display}",
             sender=b.ats(i),
             sender_name=None,
-            body=f"Hi Ayush, Thank you for applying to the {role} position at {display}.",
+            body=f"Hi Ivan, Thank you for applying to the {role} position at {display}.",
             expected_category="applied",
             identity=f"{token}|{role}",
             employer=token,
@@ -1133,7 +1133,7 @@ def _not_job_mail(b: _Builder, n: int) -> None:
         else:
             subject, body, sender = (
                 f"Opportunity at {display}",
-                f"Hi Ayush, I came across your profile and thought you might be a fit "
+                f"Hi Ivan, I came across your profile and thought you might be a fit "
                 f"for a {role} opening at {display}. Would you be open to a quick chat "
                 "this week? I would love to tell you more about the team.",
                 "recruiter@agency.test",
@@ -1175,7 +1175,7 @@ def _repeat_anonymous(b: _Builder, n: int) -> None:
                 sender=f"noreply@{token.split()[0]}.test",
                 sender_name=f"{display} Recruiting",
                 body=(
-                    f"Hi Ayush, Thanks for applying to {display}! There are a ton of "
+                    f"Hi Ivan, Thanks for applying to {display}! There are a ton of "
                     "great companies out there, so we appreciate your interest in "
                     "joining our team. While we are not able to reach out to every "
                     "applicant, our recruiting team will contact you if your skills "
@@ -1243,7 +1243,7 @@ def _anonymous_third_application(b: _Builder, n: int) -> None:
                 sender=sender,
                 sender_name=f"{display} Recruiting",
                 body=(
-                    f"Hi Ayush, Thank you for applying to the {role} position at "
+                    f"Hi Ivan, Thank you for applying to the {role} position at "
                     f"{display}. Your application has been received and our team "
                     "will review it shortly."
                 ),
@@ -1259,7 +1259,7 @@ def _anonymous_third_application(b: _Builder, n: int) -> None:
             sender=sender,
             sender_name=f"{display} Recruiting",
             body=(
-                f"Hi Ayush, Thanks for applying to {display}! There are a ton of "
+                f"Hi Ivan, Thanks for applying to {display}! There are a ton of "
                 "great companies out there, so we appreciate your interest in "
                 "joining our team. While we are not able to reach out to every "
                 "applicant, our recruiting team will contact you if your skills "
@@ -1307,7 +1307,7 @@ def _double_acknowledgement(b: _Builder, n: int) -> None:
             sender=sender,
             sender_name=f"{display} Talent Team",
             body=(
-                f"Hi Ayush, Thanks for applying to {display}. We are really glad you "
+                f"Hi Ivan, Thanks for applying to {display}. We are really glad you "
                 "are interested in what we are building. We review every application "
                 "carefully and someone from our team will reach out if there is a fit."
             ),
@@ -1325,7 +1325,7 @@ def _double_acknowledgement(b: _Builder, n: int) -> None:
             sender=sender,
             sender_name=f"{display} Hiring",
             body=(
-                f"Hey Ayush, Thanks for your interest in a role with {display}; we "
+                f"Hey Ivan, Thanks for your interest in a role with {display}; we "
                 "confirm your application has been received. What happens next? We "
                 "respond to all candidates and will be in touch."
             ),
@@ -1365,7 +1365,7 @@ def _req_id_same_title(b: _Builder, n: int) -> None:
                 sender=b.ats(i),
                 sender_name=f"{display} Careers",
                 body=(
-                    f"Hi Ayush, Thanks for applying to {display}! We have received your "
+                    f"Hi Ivan, Thanks for applying to {display}! We have received your "
                     f"application for the {role} ({req}) position."
                 ),
                 expected_category="applied",
@@ -1541,7 +1541,7 @@ def _requisition_inside_the_bound(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Careers",
             body=(
-                f"Hi Ayush, Thanks for applying to {display}! We've received your "
+                f"Hi Ivan, Thanks for applying to {display}! We've received your "
                 f"application for the {role}"
                 + _REQ_SUFFIX_TEMPLATE.format(req=req)
                 + " position. What happens next? If we decide to move forward we "
@@ -1561,7 +1561,7 @@ def _requisition_inside_the_bound(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Careers",
             body=(
-                f"Hi Ayush, We are writing regarding your application for the {role} "
+                f"Hi Ivan, We are writing regarding your application for the {role} "
                 "position. After careful consideration we have decided to move "
                 "forward with other candidates."
             ),
@@ -1604,28 +1604,28 @@ def _ats_relay_noise(b: _Builder, n: int) -> None:
     shapes = (
         (
             "New roles at {display} this week",
-            "Hi Ayush, here are the latest openings at {display}: {role}, and "
+            "Hi Ivan, here are the latest openings at {display}: {role}, and "
             "several more on our careers page. Set up an alert to hear first.",
         ),
         (
             "Join the {display} talent community",
-            "Hi Ayush, we are building a community of engineers interested in "
+            "Hi Ivan, we are building a community of engineers interested in "
             "{display}. Join to hear about openings like {role} before they are "
             "posted publicly.",
         ),
         (
             "Complete your {display} candidate profile",
-            "Hi Ayush, your candidate profile is missing a few details. Adding "
+            "Hi Ivan, your candidate profile is missing a few details. Adding "
             "them helps our recruiters find you for roles such as {role}.",
         ),
         (
             "A quick survey from {display} recruiting",
-            "Hi Ayush, we are asking engineers what matters most when choosing "
+            "Hi Ivan, we are asking engineers what matters most when choosing "
             "a team. Two minutes, and it helps us hire better.",
         ),
         (
             "Know someone for {role} at {display}?",
-            "Hi Ayush, we are hiring a {role} and referrals are how we find the "
+            "Hi Ivan, we are hiring a {role} and referrals are how we find the "
             "best people. Pass this along to anyone who would be a fit.",
         ),
     )
@@ -1684,7 +1684,7 @@ def _one_thread_many_roles(b: _Builder, n: int) -> None:
                 sender=sender,
                 sender_name=f"{display} Careers",
                 body=(
-                    f"Hi Ayush, Thank you so much for applying to the {role} role "
+                    f"Hi Ivan, Thank you so much for applying to the {role} role "
                     f"at {display}! We are always looking for great talent and we "
                     f"are excited to receive your application. We will review it "
                     f"as soon as possible."
@@ -1718,7 +1718,7 @@ def _update_in_thread(b: _Builder, n: int) -> None:
                 sender=b.ats(i),
                 sender_name=f"{display} via Relay",
                 body=(
-                    f"Hi Ayush, Thanks for applying to {display}. Our team will review "
+                    f"Hi Ivan, Thanks for applying to {display}. Our team will review "
                     "your application shortly."
                 ),
                 expected_category="applied",
@@ -1733,7 +1733,7 @@ def _update_in_thread(b: _Builder, n: int) -> None:
                 sender=b.ats(i),
                 sender_name=f"{display} via Relay",
                 body=(
-                    "Hi Ayush, Please complete the take-home exercise linked below "
+                    "Hi Ivan, Please complete the take-home exercise linked below "
                     "within five days to move to the next stage."
                 ),
                 expected_category="assessment",
@@ -1760,7 +1760,7 @@ def _ambiguous_update(b: _Builder, n: int) -> None:
                 subject=f"Thank you for applying to {display}",
                 sender=b.ats(i),
                 sender_name=f"{display} Careers",
-                body=f"Hi Ayush, Thank you for your interest in the {role} position at {display}.",
+                body=f"Hi Ivan, Thank you for your interest in the {role} position at {display}.",
                 expected_category="applied",
                 identity=f"{token}|{role}",
                 employer=token,
@@ -1772,7 +1772,7 @@ def _ambiguous_update(b: _Builder, n: int) -> None:
             sender=b.ats(i),
             sender_name=f"{display} Careers",
             body=(
-                "Hi Ayush, Thank you for your time. After careful consideration we "
+                "Hi Ivan, Thank you for your time. After careful consideration we "
                 "have decided to move forward with other candidates."
             ),
             expected_category="rejection",
@@ -1798,7 +1798,7 @@ def _bare_relay(b: _Builder, n: int) -> None:
             sender=b.ats(),
             sender_name=None,
             body=(
-                "Hi Ayush, Your application has been received. The hiring team will "
+                "Hi Ivan, Your application has been received. The hiring team will "
                 "review it and be in touch if there is a fit."
             ),
             expected_category="applied",
@@ -1839,7 +1839,7 @@ def _hostile_text(b: _Builder, n: int) -> None:
                 subject=f"Thank you for applying to {display}",
                 sender=f"no-reply@{forged_token.split()[0]}.test",
                 sender_name=f"{display}\u202e\u200b Careers",
-                body=f"Hi Ayush, Thank you for applying to the {role} role at {display}.",
+                body=f"Hi Ivan, Thank you for applying to the {role} role at {display}.",
                 expected_category="applied",
                 identity=f"{forged_token.split()[0]}|{role}",
                 employer=forged_token.split()[0],
@@ -1857,7 +1857,7 @@ def _hostile_text(b: _Builder, n: int) -> None:
                 body=(
                     "Congratulations on your offer! We are delighted to welcome you. "
                     "\n\n"
-                    f"Hi Ayush, After careful consideration we will not be moving "
+                    f"Hi Ivan, After careful consideration we will not be moving "
                     f"forward with your application for the {role} role at {display}."
                 ),
                 expected_category="rejection",
@@ -1875,7 +1875,7 @@ def _hostile_text(b: _Builder, n: int) -> None:
                 sender=b.ats(i),
                 sender_name=f"{display} Careers",
                 body=(
-                    f"Hi Ayush, We will not be mov\u200bing forward with your "
+                    f"Hi Ivan, We will not be mov\u200bing forward with your "
                     f"application for the {role} role at {display}."
                 ),
                 expected_category="rejection",
@@ -1910,28 +1910,28 @@ _UPDATES: tuple[tuple[str, str, str, str], ...] = (
     (
         "rejection",
         "Update on your application to {e}",
-        "Hi Ayush, After careful consideration we have decided not to move "
+        "Hi Ivan, After careful consideration we have decided not to move "
         "forward. We appreciate the time you invested with us.",
         "rejected",
     ),
     (
         "interview",
         "Next steps with {e}",
-        "Hi Ayush, We would like to invite you to interview. Please choose a "
+        "Hi Ivan, We would like to invite you to interview. Please choose a "
         "time from the scheduling link below.",
         "interviewing",
     ),
     (
         "assessment",
         "Your {e} take-home",
-        "Hi Ayush, Please complete the take-home exercise linked below within "
+        "Hi Ivan, Please complete the take-home exercise linked below within "
         "five days to move to the next stage.",
         "assessment",
     ),
     (
         "offer",
         "An offer from {e}",
-        "Hi Ayush, We are delighted to extend you an offer to join us. The "
+        "Hi Ivan, We are delighted to extend you an offer to join us. The "
         "written terms are attached for your review.",
         # `offered`, the STATUS, not `offer`, the mail CATEGORY. The two scales
         # differ by exactly this word (`pipeline._STATUS_RANK` against
@@ -1949,7 +1949,7 @@ _UPDATES: tuple[tuple[str, str, str, str], ...] = (
 
 def _confirmation_body(display: str, role: str) -> str:
     return (
-        f"Hi Ayush, Thank you for applying to the {role} position at {display}. "
+        f"Hi Ivan, Thank you for applying to the {role} position at {display}. "
         "Your application has been received and is being reviewed."
     )
 
@@ -2190,7 +2190,7 @@ def _reopen_after_rejection(b: _Builder, n: int) -> None:
             sender=b.ats(),
             sender_name=f"{display} Recruiting",
             body=(
-                "Hi Ayush, After careful consideration we have decided not to "
+                "Hi Ivan, After careful consideration we have decided not to "
                 "move forward with your candidacy at this time."
             ),
             expected_category="rejection",
@@ -2290,7 +2290,7 @@ def _employer_spelling(b: _Builder, n: int) -> None:
                 subject=f"Thank you for applying to {name}",
                 sender=b.ats(i),
                 sender_name=f"{name} Recruiting",
-                body=f"Hi Ayush, Thank you for applying to the {role} position at {name}.",
+                body=f"Hi Ivan, Thank you for applying to the {role} position at {name}.",
                 expected_category="applied",
                 identity=f"{token}|{role}",
                 employer=token,
@@ -2638,9 +2638,9 @@ _POST_NAME_UPDATE_BOILERPLATE: tuple[str, ...] = (
 #: category is what makes the mail an update rather than an assertion that a new
 #: application exists, and the verdict itself is not what this family measures.
 _POST_NAME_UPDATE_BODIES: tuple[str, ...] = (
-    "Hi Ayush, Thank you for your time. After careful consideration we have "
+    "Hi Ivan, Thank you for your time. After careful consideration we have "
     "decided to move forward with other candidates for this role.",
-    "Hello Ayush, We appreciate you taking the time to apply. We will not be "
+    "Hello Ivan, We appreciate you taking the time to apply. We will not be "
     "moving forward with your candidacy for this role at this time.",
 )
 
@@ -2675,7 +2675,7 @@ def _post_name_body(display: str) -> str:
     """
 
     return (
-        f"Hi Ayush, Thank you for applying to {display}. We have received your "
+        f"Hi Ivan, Thank you for applying to {display}. We have received your "
         "application for this role and the recruiting team is reviewing it now. "
         "We will be in touch about this role if there is a fit."
     )
@@ -3387,13 +3387,13 @@ def _outreach_autoresponders(b: _Builder, n: int) -> None:
 #: this from the corpus rather than trusting this comment.
 _ROLELESS_ACKS: tuple[tuple[str, str], ...] = (
     ("{e} | Application Received",
-     "Hi Ayush, Thank you for applying to {e}. We have received your "
+     "Hi Ivan, Thank you for applying to {e}. We have received your "
      "submission and our team will review it shortly."),
     ("Your application has been received!",
-     "Hi Ayush, Thanks for applying to {e}. Our team will review your "
+     "Hi Ivan, Thanks for applying to {e}. Our team will review your "
      "application shortly."),
     ("Thanks for applying to {e}!",
-     "Hi Ayush, Thank you for your interest in joining {e}. Your submission "
+     "Hi Ivan, Thank you for your interest in joining {e}. Your submission "
      "has been received and is being reviewed."),
 )
 
@@ -3423,17 +3423,17 @@ _ROLELESS_ACKS: tuple[tuple[str, str], ...] = (
 #: mail", and every one of these cases would leave the queue for nothing.
 _UNCERTAIN_ROLELESS: tuple[tuple[str, str, str, str], ...] = (
     ("below_gate", "An offer from {e}",
-     "Hi Ayush, We are delighted to extend you an offer to join us. The "
+     "Hi Ivan, We are delighted to extend you an offer to join us. The "
      "written terms are attached for your review.", "offer"),
     ("ats_floor", "Your {e} application",
-     "Hi Ayush, We have an update to share about your application. Please "
+     "Hi Ivan, We have an update to share about your application. Please "
      "look out for a further message from the hiring team.", "pending_application"),
     ("ats_floor", "A note about your application",
-     "Hello Ayush, We wanted to let you know where things stand with your "
+     "Hello Ivan, We wanted to let you know where things stand with your "
      "application. Someone will write again once the panel has met.",
      "pending_application"),
     ("ats_floor", "Regarding your candidacy",
-     "Hi Ayush, Thank you for your patience while we work through this. Your "
+     "Hi Ivan, Thank you for your patience while we work through this. Your "
      "candidacy is still under discussion and we will be in touch.",
      "pending_application"),
 )
@@ -3569,15 +3569,15 @@ def _hand_dismissal_swallows_later_mail(b: _Builder, n: int) -> None:
 
     afters = (
         ("rejection", "Update on your application to {e}",
-         "Hi Ayush, After careful consideration we have decided not to move "
+         "Hi Ivan, After careful consideration we have decided not to move "
          "forward with your application. We appreciate your interest.",
          "rejected"),
         ("interview", "Next steps with {e}",
-         "Hi Ayush, We would like to invite you to interview. Please choose a "
+         "Hi Ivan, We would like to invite you to interview. Please choose a "
          "time from the scheduling link below.",
          "interviewing"),
         ("assessment", "Your {e} take-home",
-         "Hi Ayush, Please complete the take-home exercise linked below within "
+         "Hi Ivan, Please complete the take-home exercise linked below within "
          "five days to move to the next stage.",
          "assessment"),
     )
@@ -3632,7 +3632,7 @@ def _hand_dismissal_swallows_later_mail(b: _Builder, n: int) -> None:
                 sender=b.ats(i),
                 sender_name=f"{display} Recruiting",
                 body=(
-                    f"Hi Ayush, We are delighted to extend you an offer for the "
+                    f"Hi Ivan, We are delighted to extend you an offer for the "
                     f"{role} position. The written terms are attached for your "
                     f"review."
                 ),
@@ -3861,7 +3861,7 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
     # rejection's whole vocabulary and nothing asks who was not selected.
     (
         "Update on the {r} position at {d}",
-        "Hi Ayush, We wanted to let you know {obj} not selected for the "
+        "Hi Ivan, We wanted to let you know {obj} not selected for the "
         "position. We have decided to move forward with other candidates.",
         "the candidate you referred was",
         "you were",
@@ -3869,7 +3869,7 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
     ),
     (
         "An update from {d}",
-        "Hi Ayush, Unfortunately we will not be moving forward with {obj} "
+        "Hi Ivan, Unfortunately we will not be moving forward with {obj} "
         "application at this time. We appreciate the interest in the {r} role.",
         "your referral's",
         "your",
@@ -3880,7 +3880,7 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
     # cannot see the distinction at all.
     (
         "After careful consideration",
-        "Hi Ayush, After careful consideration we have decided not to proceed "
+        "Hi Ivan, After careful consideration we have decided not to proceed "
         "with {obj} at this time. Thank you for the time invested in the {r} "
         "process.",
         "the candidate you referred",
@@ -3890,7 +3890,7 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
     # Not rejection-specific. The same blindness files a stage ADVANCE.
     (
         "Scheduling for the {r} position at {d}",
-        "Hi Ayush, We have scheduled an interview with {obj} for next Tuesday. "
+        "Hi Ivan, We have scheduled an interview with {obj} for next Tuesday. "
         "Please let us know if that time works.",
         "the candidate you referred",
         "you",
@@ -3898,7 +3898,7 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
     ),
     (
         "News about the {r} position at {d}",
-        "Hi Ayush, We are pleased to extend an offer to {obj}. Thank you for "
+        "Hi Ivan, We are pleased to extend an offer to {obj}. Thank you for "
         "the time invested throughout this process.",
         "the candidate you referred",
         "you",
@@ -3920,34 +3920,34 @@ _SOMEONE_ELSE_PAIRS: tuple[tuple[str, str, str, str, str], ...] = (
 _REFERRAL_BEARING_OWN: tuple[tuple[str, str, str], ...] = (
     (
         "News about the {r} position at {d}",
-        "Hi Ayush, Thank you for the referral from a member of our team, which "
+        "Hi Ivan, Thank you for the referral from a member of our team, which "
         "is how your name reached us. We are pleased to extend an offer to you "
         "for the {r} role.",
         "offer",
     ),
     (
         "Update on the {r} position at {d}",
-        "Hi Ayush, You came to us through a referral. Unfortunately we have "
+        "Hi Ivan, You came to us through a referral. Unfortunately we have "
         "decided to move forward with other candidates and will not be "
         "proceeding with your application.",
         "rejection",
     ),
     (
         "Scheduling for the {r} position at {d}",
-        "Hi Ayush, Your referral from a teammate was a strong signal. We have "
+        "Hi Ivan, Your referral from a teammate was a strong signal. We have "
         "scheduled an interview with you for next Tuesday.",
         "interview",
     ),
     (
         "After careful consideration",
-        "Hi Ayush, We appreciate the referral that introduced you to us. After "
+        "Hi Ivan, We appreciate the referral that introduced you to us. After "
         "careful consideration we have decided not to proceed with your "
         "application at this time.",
         "rejection",
     ),
     (
         "Next steps at {d}",
-        "Hi Ayush, Thanks for referring a colleague to us as well. Separately, "
+        "Hi Ivan, Thanks for referring a colleague to us as well. Separately, "
         "we would like to schedule an interview with you for the {r} role.",
         "interview",
     ),
@@ -4035,7 +4035,7 @@ def _someone_elses_outcome(b: _Builder, n: int) -> None:
             sender=sender,
             sender_name=f"{display} Talent",
             body=(
-                f"Hi Ayush, Thank you for applying to the {role} role at "
+                f"Hi Ivan, Thank you for applying to the {role} role at "
                 f"{display}. We have received your application and the team is "
                 f"reviewing it."
             ),

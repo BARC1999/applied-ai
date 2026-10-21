@@ -52,7 +52,7 @@ from jobtracker.database.models import (
 USER = uuid.UUID("00000000-0000-0000-0000-0000000000dd")
 
 GOOGLE_SNIPPET = (
-    "Hi Ayush Yadav, Thanks for applying to Google! There are a ton of great "
+    "Hi Ivan Kozlov, Thanks for applying to Google! There are a ton of great "
     "companies out there, so we appreciate your interest in joining our team. "
     "While we're not able to reach out to every applicant"
 )
@@ -70,7 +70,7 @@ RULED_ON = "1a02aaa0deadbeef"
 #: test needs the rebuild to have a role to write, which is the only condition
 #: under which a typed role could be overwritten.
 NAMED_ROLE_SNIPPET = (
-    "Hi Ayush Yadav, Thank you for applying to the Software Engineer, "
+    "Hi Ivan Kozlov, Thank you for applying to the Software Engineer, "
     "Infrastructure position at Google. There are a ton of great companies out "
     "there, so we appreciate your interest in joining our team."
 )

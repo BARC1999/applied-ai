@@ -43,7 +43,7 @@ from jobtracker.cloud.applications import (
 USER = uuid.UUID("00000000-0000-0000-0000-0000000000cc")
 
 GOOGLE_SNIPPET = (
-    "Hi Ayush Yadav, Thanks for applying to Google! There are a ton of great "
+    "Hi Ivan Kozlov, Thanks for applying to Google! There are a ton of great "
     "companies out there, so we appreciate your interest in joining our team. "
     "While we're not able to reach out to every applicant"
 )

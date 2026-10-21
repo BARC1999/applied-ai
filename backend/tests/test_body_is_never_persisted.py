@@ -87,7 +87,7 @@ SENTINEL = "ZZQX-body-sentinel-must-never-be-stored-9f4c2a"
 # preamble, which is exactly why the snippet cannot see it. The snippet here is
 # truncated before the verdict, the way Gmail's really is.
 REJECTION_SNIPPET = (
-    "Hi Ayush, Thank you for your interest in the Embedded Software Engineer, "
+    "Hi Ivan, Thank you for your interest in the Embedded Software Engineer, "
     "Access Control opportunity. It means a lot to us that you would consider "
     "joining our mission here at Verkada. Although your"
 )
@@ -127,7 +127,7 @@ def _full_message(mid: str, *, subject: str, sender: str, body: str, snippet: st
 RAW = {
     "m-rejection": _full_message(
         "m-rejection",
-        subject="Thank you for your interest in Verkada, Ayush",
+        subject="Thank you for your interest in Verkada, Ivan",
         sender="Verkada <no-reply@us.greenhouse-mail.io>",
         body=REJECTION_BODY,
         snippet=REJECTION_SNIPPET,
@@ -352,7 +352,7 @@ def test_the_fetched_body_is_what_makes_the_verdict_right() -> None:
     from jobtracker.database.models import EmailCategory
 
     rules = RulesClassifier()
-    subject = "Thank you for your interest in Verkada, Ayush"
+    subject = "Thank you for your interest in Verkada, Ivan"
     sender = "no-reply@us.greenhouse-mail.io"
 
     from_snippet = rules.classify(subject, REJECTION_SNIPPET, sender)
@@ -736,7 +736,7 @@ async def test_a_correction_does_not_carry_the_body_into_training_data(
 #: A sentinel further into the body could never reach the column whatever the
 #: pattern did, and the test would pass on a capture of any length.
 BOUNDARY_BODY = (
-    "Hi Ayush, Thank you for applying to the Staff Platform Engineer position "
+    "Hi Ivan, Thank you for applying to the Staff Platform Engineer position "
     f"{SENTINEL} at Northwind Systems. We review every application carefully "
     "and someone from the team will be in touch."
 )

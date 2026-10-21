@@ -144,7 +144,7 @@ async def _seed() -> int:
                     sender_email=AMAZON_SENDER,
                     received_at=BASE + timedelta(minutes=index),
                     body_snippet=(
-                        "Amazon.jobs Hi Ayush, Thanks for applying to Amazon! "
+                        "Amazon.jobs Hi Ivan, Thanks for applying to Amazon! "
                         "We&#39;ve received your application for the "
                         f"{role} (ID: {req}) position. What happens next?"
                     ),
