@@ -218,7 +218,7 @@
 # refs/remotes/origin/main. That proves the logic, not the fetch. For the
 # fetch, make the clone Vercel makes:
 #
-#   git clone --depth=10 --branch <branch> git@github.com:yadava5/applied.git /tmp/c
+#   git clone --depth=10 --branch <branch> git@github.com:BARC1999/applied-ai.git /tmp/c
 #   cp vercel-ignore-build.sh /tmp/c/ && cd /tmp/c
 #   VERCEL_ENV=preview VERCEL_GIT_COMMIT_REF=<branch> \
 #     VERCEL_GIT_COMMIT_SHA=$(git rev-parse HEAD) bash vercel-ignore-build.sh web

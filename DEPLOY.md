@@ -426,7 +426,7 @@ matcher that treats `*` as crossing `/`; where rules conflict Vercel takes the
 permissive one, and both of these are `false`, so they cannot fight.
 
 `main` IS protected. Measured 2026-09-04 with
-`gh api repos/yadava5/applied/branches/main/protection`: three required
+`gh api repos/BARC1999/applied-ai/branches/main/protection`: three required
 status checks — `README numbers agree with the code`, `Scan for secrets` and
 `Test data baseline agrees with the tree` — plus strict up-to-date branches
 (`strict: true`). `enforce_admins` is `false` and no pull-request review is
@@ -475,7 +475,7 @@ reads `GET /health`, which reports the running commit from Vercel's own
 newest READY production deployment's `meta.githubCommitSha` from the Vercel REST
 API, which needs a read-scoped token in the `VERCEL_TOKEN` repository secret.
 That secret **exists** — created 2026-08-15, confirmed by `gh secret list -R
-yadava5/applied` on 2026-09-04. This paragraph previously said it did not, and
+BARC1999/applied-ai` on 2026-09-04. This paragraph previously said it did not, and
 concluded the job was red with `UNKNOWN`; that conclusion followed from a
 premise that stopped being true the day the secret was added.
 

@@ -108,9 +108,9 @@ dist = [
 # CLI entry point by design: Vercel imports `api/index.py` as an ASGI callable.
 
 [project.urls]
-Homepage = "https://github.com/yadava5/applied"
-Repository = "https://github.com/yadava5/applied"
-Issues = "https://github.com/yadava5/applied/issues"
+Homepage = "https://github.com/BARC1999/applied-ai"
+Repository = "https://github.com/BARC1999/applied-ai"
+Issues = "https://github.com/BARC1999/applied-ai/issues"
 
 # ============================================================================
 # Tool Configuration

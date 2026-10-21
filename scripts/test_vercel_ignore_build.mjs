@@ -868,7 +868,7 @@ test('with no remote at all, the default branch is fetched by URL', () => {
     });
     assert.equal(got.verdict, BUILD, `an unresolved base must build:\n${got.stderr}`);
     assert.ok(
-      got.stderr.includes('tried: https://github.com/yadava5/applied.git'),
+      got.stderr.includes('tried: https://github.com/BARC1999/applied-ai.git'),
       `the arm must fall back to the repository URL:\n${got.stderr}`,
     );
   } finally {

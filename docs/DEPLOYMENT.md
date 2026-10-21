@@ -181,7 +181,7 @@ test fails the workflow, which is the whole point of having the gate.
 | Vercel (Production) — `main` branch | Merge to `main` | The above, plus **backend-ci** (both `test` and `cloud-smoke` jobs) — also not a required context |
 
 **Branch protection, measured 2026-09-04** with
-`gh api repos/yadava5/applied/branches/main/protection`. `main` requires
+`gh api repos/BARC1999/applied-ai/branches/main/protection`. `main` requires
 exactly three status checks, and these are their names:
 `README numbers agree with the code` (`readme-facts.yml`), `Scan for secrets`
 (`gitleaks.yml`) and `Test data baseline agrees with the tree`

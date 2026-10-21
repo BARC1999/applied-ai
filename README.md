@@ -1,3 +1,73 @@
+
+give me short russian male name
+Ivan — short, classic, and distinctly Russian.
+
+A few more: Lev, Yuri, Maks, Sasha, and Vlad.
+
+in english
+Here are short Russian male names written in English:
+
+Lev
+
+Ivan
+
+Vlad
+
+Yuri
+
+Maks
+
+Boris
+
+Nikita
+
+Alex
+
+Misha
+
+Dima
+
+My favorite: Lev — short, strong, and cool.
+
+full name
+Here are some short Russian male names with full names in English:
+
+Lev Volkov
+
+Ivan Morozov
+
+Vlad Sokolov
+
+Maks Orlov
+
+Yuri Petrov
+
+Misha Romanov
+
+Dima Kozlov
+
+Nikita Ivanov
+
+Alexei Smirnov
+
+Boris Lebedev
+
+My pick: Lev Volkov — short, strong, and mysterious.
+
+
+Pasted text(20261021-223435).txt
+Document
+remove all contact information here
+I removed the email address, personal GitHub profile link, and maintainer name from the document.
+
+Download the cleaned text file
+
+
+cleaned_no_contact_info.txt
+Document
+
+
+
 <p align="center">
   <img src="docs/branding/readme-light.svg#gh-light-mode-only" width="800" alt="Applied — your job search, tracked automatically">
   <img src="docs/branding/readme-dark.svg#gh-dark-mode-only" width="800" alt="Applied — your job search, tracked automatically">
@@ -104,7 +174,7 @@ until the app completes Google's OAuth verification and an independent CASA secu
 it may authorize at most **100 test users**, each added by address on the OAuth consent screen.
 That cap is Google's, not a positioning choice, and it is why access is granted by hand.
 
-**To ask for a seat**, email **aesh.03.23@gmail.com** with the Google account you would connect
+**To ask for a seat**, email **[contact information removed]** with the Google account you would connect
 read-only. Say roughly how you would use it; that is the feedback the beta exists for.
 
 **What works with no invite and no account:**
@@ -196,13 +266,13 @@ and its window reached inside the job title, so the text naming WHICH applicatio
 HAPPENED to it. Removed, on evidence that it points the wrong way: across the transcribed wordings
 that greeting opens **67% of rejections and 22% of confirmations**. Wrong verdicts stated as fact
 went 139 to 119 with no confirmation family losing a single message
-([#455](https://github.com/yadava5/applied/issues/455)).
+([#455](https://github.com/BARC1999/applied-ai/issues/455)).
 
 **And read it knowing it is a property of the mix, not of the engine.** It was 93.05% on
 2026-08-22 and is 92.43%
 on the same engine, and it has moved three times since without a rule changing. It went DOWN first,
 to 92.87%, because the corpus stopped being written entirely by the author of the classifier. It went
-back up to 93.24% because [#626](https://github.com/yadava5/applied/issues/626) added 760 messages
+back up to 93.24% because [#626](https://github.com/BARC1999/applied-ai/issues/626) added 760 messages
 whose difficulty is entirely in the IDENTITY layer — a job title readable only from the last segment
 of an ATS subject — and the classifier reads every one of them correctly. Neither move is an accuracy
 change.
@@ -212,7 +282,7 @@ published here.** 93.24% was measured by an instrument that was wrong. The harne
 classifier bodies with no length cap, so the 320-message family built to test the product's own
 4,000-character cap was graded on text production cannot deliver, and 160 verdicts counted correct
 were the harness's rather than the product's
-([#767](https://github.com/yadava5/applied/issues/767)). Corrected, they abstain — `wrong` did not
+([#767](https://github.com/BARC1999/applied-ai/issues/767)). Corrected, they abstain — `wrong` did not
 move and `Wrong AND stated to the user as fact` stayed 0, so nothing was ever told to a reader as
 fact; 160 things stopped being counted as read. **Every earlier accuracy figure in this series
 overstates by roughly the same 0.88 points.** Measured before the transcribed families landed: **100.0% of the 13,730 lifecycle messages contained an
@@ -253,7 +323,7 @@ second wording lost the role entirely, because the pattern that reads a requisit
 excluded the "(" that a real title like "Software Engineer I, Entry-Level (Graduation Date: Fall
 2025-Summer 2026)" contains. Both are fixed. Split is kept as its own number because it is the milder
 failure — the user sees one application twice and can act on it, where a merge loses a record
-silently. [#466](https://github.com/yadava5/applied/issues/466).
+silently. [#466](https://github.com/BARC1999/applied-ai/issues/466).
 
 **30 messages did MINT a card that should not exist**, and that number is not a fix — read it with the
 caveat rather than without. It was 2, both a profile-completion nudge relayed by an ATS and scored
@@ -269,7 +339,7 @@ never once caught it being *wrong*, so every mistake it made it made confidently
 as a fact about their own job search. Two thirds of them now land in the queue instead, because the
 classifier stopped scoring quoted history and a reply's copied subject as the message's own words.
 
-**That fix shipped, as [#451](https://github.com/yadava5/applied/issues/451)** — this paragraph used
+**That fix shipped, as [#451](https://github.com/BARC1999/applied-ai/issues/451)** — this paragraph used
 to describe it as filed-not-shipped, three lines under a table already reporting the result. A
 *reference* to an application tied with a *report* about one, and the tie broke on enum declaration
 order. Two changes in one commit: the reference pattern demoted from `strong` to `weak` for
@@ -292,8 +362,8 @@ the review path, so "held for a person to settle" and "vanished entirely" produc
 precisely the blind spot that let four Microsoft applications disappear on 2026-08-21 with every gate
 green. It went from 610 to 0 on that day, and **60 messages about real applications
 now reach no card, no queue and no counter**
-([#447](https://github.com/yadava5/applied/issues/447), then
-[#458](https://github.com/yadava5/applied/issues/458)). The 610 scored
+([#447](https://github.com/BARC1999/applied-ai/issues/447), then
+[#458](https://github.com/BARC1999/applied-ai/issues/458)). The 610 scored
 `other` at 0.50 — not a lifecycle category, so neither the ATS floor nor the drop counter could see
 them. `pipeline.references_an_application` floors a message an ATS relayed into the review queue when
 its own text speaks about an application the reader made, and only then: the corpus carries 400
@@ -324,14 +394,14 @@ those. When one is fixed its number moves and the gate has to say so:
 - **`quoted-history`, 200 of 400.** Half of the follow-ups that quote their own confirmation read as
   `applied`, so an interview invite never advances the card it belongs to. The widest of the three
   and the mechanism behind the next one.
-- **`rescinded-offer`, 0 wrong and 260 held** ([#417](https://github.com/yadava5/applied/issues/417)).
+- **`rescinded-offer`, 0 wrong and 260 held** ([#417](https://github.com/BARC1999/applied-ai/issues/417)).
   It measured 164 of 260 confidently wrong until the classifier stopped scoring quoted history. It is
   not yet right, and this bullet used to describe the wrong failure: the withdrawals do not vanish,
   they **land in the review queue**. The offer files a card at `offered`, the withdrawal that revokes
   it scores `other` at 0.50 — nothing in the rejection patterns matches "we must rescind the offer" —
   and until the user answers, the board shows an offer they no longer have. The card is ahead of
   their life. A known, open defect, pinned so a fix moves it, and half of #447.
-- **`hostile-zero-width`, 70 to 83 of 100** ([#424](https://github.com/yadava5/applied/issues/424) is
+- **`hostile-zero-width`, 70 to 83 of 100** ([#424](https://github.com/BARC1999/applied-ai/issues/424) is
   the sender-name half). A zero-width space inside "moving" defeats the rejection pattern while
   rendering identically to the eye.
 
@@ -517,7 +587,7 @@ licence, once given, runs with the copy — and the PRIOR VERSIONS section of th
 so in terms. Third-party dependencies keep their own licences, which nothing here alters.
 
 **To license Applied, host it, evaluate it for an institution, or talk about a partnership,
-sponsorship or funding**, contact Ayush Yadav at **aesh.03.23@gmail.com**. Permission is granted
+sponsorship or funding**, contact Ayush Yadav at **[contact information removed]**. Permission is granted
 only in writing.
 
 **Contributions.** This is not an open-source project and pull requests are not accepted — the
@@ -528,8 +598,8 @@ page you can show is wrong, and security findings are genuinely wanted: email th
 
 ## Who makes it
 
-**Ayush Yadav** — sole author and maintainer. Design, full-stack engineering, and ML.
-[github.com/yadava5](https://github.com/yadava5) · aesh.03.23@gmail.com
+**Maintainer** — sole author and maintainer. Design, full-stack engineering, and ML.
+[github.com/yadava5]([profile link removed]) · [contact information removed]
 
 ---
 
@@ -798,7 +868,7 @@ Two lint gates run **advisory**, on purpose. `ruff check .` reported 379 finding
 #### Web app
 
 ```bash
-git clone https://github.com/yadava5/applied.git
+git clone https://github.com/BARC1999/applied-ai.git
 cd applied/apps/web
 
 cp .env.example .env.local     # Supabase URL + anon key, BACKEND_API_URL
@@ -947,7 +1017,7 @@ Every number above terminates in something you can open.
 - `ml_monitoring_report.{md,json}`, `ml_monitoring_history.jsonl`, `label_balance_report.md`
 - `ml/browser/artifacts/model_quantized.onnx` — was 22,843,695 bytes. **Withdrawn 2026-08-15 and no longer committed**, so this one cannot be checked with `stat`; the number is pinned in `scripts/readme_facts.py`. Re-export it locally with `ml/browser/export_onnx.py` if you need the artifact.
 
-**Third-party score.** [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/yadava5/applied) grades this repository against 18 supply-chain checks and publishes the result. It is computed by someone else, which is the entire value: a number this project calculates about itself is a claim. Several of the 18 grade repository *settings* that no file in the repo can turn on, so the score moving up over time is a better signal than wherever it starts.
+**Third-party score.** [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/BARC1999/applied-ai) grades this repository against 18 supply-chain checks and publishes the result. It is computed by someone else, which is the entire value: a number this project calculates about itself is a claim. Several of the 18 grade repository *settings* that no file in the repo can turn on, so the score moving up over time is a better signal than wherever it starts.
 
 **Security posture.** `docs/RLS-AUDIT-2026-08-03.md` is the read of the live database, including a retracted finding it kept rather than deleted, and `docs/harden-2026-08-03.sql` is the applied fix with its verification query.
 
