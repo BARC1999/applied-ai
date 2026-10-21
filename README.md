@@ -12,16 +12,6 @@
 </p>
 
 <p align="center">
-  <a href="https://getapplied.vercel.app"><strong>Live app</strong></a> ·
-  <a href="#status-and-access"><strong>Status &amp; access</strong></a> ·
-  <a href="https://getapplied.vercel.app/demo">Try it, no account</a> ·
-  <a href="https://getapplied.vercel.app/privacy">Privacy</a> ·
-  <a href="https://getapplied.vercel.app/system-card">System Card</a> ·
-  <a href="#what-you-can-check">What you can check</a> ·
-  <a href="#licensing-and-partnership">Licensing</a>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/tests-3163%20collected%20%C2%B7%200%20skipped-brightgreen" alt="Tests">
   <img src="https://img.shields.io/badge/rules%20macro--F1-0.9896%20(CI%20floor%200.95)-2b9348" alt="Rules macro-F1">
   <img src="https://img.shields.io/badge/Next.js-16.3-000000?logo=nextdotjs&logoColor=white" alt="Next.js">
@@ -420,15 +410,6 @@ python -m jobtracker.scripts.benchmark_classifier_latency --require-semantic --o
 
 ## The published checkpoint was withdrawn
 
-On **2026-08-15** the trained SetFit checkpoint and everything derived from it were pulled from
-every public surface. What was published, and is no longer:
-
-| Surface | Held | Now |
-| --- | --- | --- |
-| This repository | `model.onnx` (90.4 MB fp32), `model_quantized.onnx` and the `ml/browser/site/` copy (22.8 MB int8 each), `head.json` (the fitted head), `examples.json` (vectors from the fine-tuned body) | Deleted at `HEAD` and `.gitignore`d. **Still reachable in git history** — see below |
-| `huggingface.co/yadava5/jobtracker-setfit-classifier` | `model.safetensors`, `model_head.pkl`, `training_metadata.json`, and a 723-byte hand-written model card | Private |
-| `huggingface.co/spaces/yadava5/jobtracker-classifier` | its own int8 copy, `head.json`, `examples.json` | Private |
-
 **Why — and precisely what was wrong.** The checkpoint (`setfit_model_20260306_175404`) recorded
 `user_correction: 39` of `total_examples: 192` in its own `training_metadata.json`, so a published
 artifact stated in machine-readable form that it had been fitted partly on a real mailbox.
@@ -523,13 +504,6 @@ only in writing.
 **Contributions.** This is not an open-source project and pull requests are not accepted — the
 licence grants no rights, so there is nothing to contribute under. Bug reports, a claim on this
 page you can show is wrong, and security findings are genuinely wanted: email the address above.
-
----
-
-## Who makes it
-
-**Maintainer** — sole author and maintainer. Design, full-stack engineering, and ML.
-[github.com/yadava5]([profile link removed]) · [contact information removed]
 
 ---
 
@@ -952,7 +926,3 @@ Every number above terminates in something you can open.
 **Security posture.** `docs/RLS-AUDIT-2026-08-03.md` is the read of the live database, including a retracted finding it kept rather than deleted, and `docs/harden-2026-08-03.sql` is the applied fix with its verification query.
 
 ---
-
-<p align="center">
-  <sub>Built by Ayush Yadav · <a href="https://getapplied.vercel.app">getapplied.vercel.app</a></sub>
-</p>
