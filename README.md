@@ -40,7 +40,6 @@ honest record of where they applied.
 - **Application linking** — related messages are grouped into one tracked application and relinked when new signals arrive
 - **Human-in-the-loop review** — anything below `CONFIDENCE_AUTO = 0.85` (`classifier/hybrid.py`) lands in a review queue; corrections persist to `training_data` and flag the email `user_corrected`, so a later sync leaves your answer alone. Nothing retrains on them — the deployed classifier is rules-only. The training machinery ships in the repository, but no hosted path reaches it
 - **Pipeline views** — Feature Cards, Compact Rows, or a Status Board, filterable by unreviewed and unlinked
-- **Fixture demo** — the full UI on synthetic data at [`/demo`](https://getapplied.vercel.app/demo), no login. Layer 1 recomputes **live in the browser** there via `apps/web/lib/demo/rulesLayer.ts`, a port of the same 220 patterns; layers 2 and 3 are precomputed, because the app's CSP forbids the WASM eval and CDN fetch Transformers.js needs.
 - **Weekly ML operations** — candidate mining for sparse labels, drift and confidence monitoring, and an alert-issue path, all scripted (`scripts/weekly_labeling_cycle.sh`, `scripts/monitoring_cycle.sh`). These are operator commands run by hand against a local backend; neither runs in CI, and the hosted app does not run them
 
 ### The three-layer cascade
@@ -96,17 +95,6 @@ That cap is Google's, not a positioning choice, and it is why access is granted 
 
 **To ask for a seat**, email **[contact information removed]** with the Google account you would connect
 read-only. Say roughly how you would use it; that is the feedback the beta exists for.
-
-**What works with no invite and no account:**
-
-- [`/demo`](https://getapplied.vercel.app/demo) — the whole interface over synthetic mail. Layer 1
-  recomputes live in your browser.
-- [`/import`](https://getapplied.vercel.app/import) — drop a Google Takeout export and have your
-  own mail classified on-device.
-
-What Applied reads from a connected mailbox, what it keeps, and how to delete all of it is written
-out claim-by-claim at [`/privacy`](https://getapplied.vercel.app/privacy), with each claim cited to
-the file that implements it.
 
 ---
 
@@ -480,7 +468,7 @@ Being precise about this is the point.
 ### Planned — not in this build
 
 - **Semantic layers in the cloud.** The deployed Vercel product runs the **rules layer only**, and there is no embedding or SetFit inference on that path. Moving them behind an external inference service is a documented follow-up in `requirements.txt` and `docs/WEB_ARCHITECTURE.md`; nothing is wired.
-- **In-browser inference anywhere public.** The 22.8 MB int8 ONNX build was real and ran in the Hugging Face Space and under `ml/browser/site/`. Both were withdrawn on 2026-08-15: the Space is private and the weights are out of this repository. `ml/browser/site/` still holds the loader, the rules and the tokenizer, and will run again against a locally-exported checkpoint — it ships no weights. It never ran on `getapplied.vercel.app` in any case: the app's strict CSP forbids the WASM eval and CDN fetch Transformers.js needs, so `/demo` runs layer 1 live in the browser and serves precomputed layer 2 and 3 verdicts.
+- **In-browser inference anywhere public.** The 22.8 MB int8 ONNX build was real and ran in the Hugging Face Space and under `ml/browser/site/`. Both were withdrawn on 2026-08-15: the Space is private and the weights are out of this repository. `ml/browser/site/` still holds the loader, the rules and the tokenizer, and will run again against a locally-exported checkpoint — it ships no weights. 
 - **WebSocket sync.** Vercel's Python runtime does not support it, so sync status is polled. The desktop path had a live `/ws/sync-status` stream; that router was deleted with the rest of the desktop surface, so there is no WebSocket anywhere in the tree now.
 - **Credential rotation.** `user_credentials.key_id` and a multi-key decrypt path are scaffolded. Only key `v1` is active and rotation is not wired.
 - **A mobile client.** `apps/mobile/` is a reserved directory. There is no app in it.
@@ -511,8 +499,6 @@ page you can show is wrong, and security findings are genuinely wanted: email th
 
 | Doc | What's inside |
 | --- | --- |
-| [System Card](https://getapplied.vercel.app/system-card) | Classifier design, evaluation, limitations, safety notes |
-| [Privacy](https://getapplied.vercel.app/privacy) | What Applied reads, what it stores, where it runs, how to delete it — each claim cited to the file that implements it |
 | [`docs/DECISIONS.md`](docs/DECISIONS.md) | Choices whose rejected alternative is attractive and whose reason is invisible from the code — what was chosen against, and whether anything enforces it |
 | [`docs/CLASSIFIER_RULES_GOVERNANCE.md`](docs/CLASSIFIER_RULES_GOVERNANCE.md) | What a change to the classifier rules has to prove before it lands, and what actually enforces it |
 | [`docs/TEST_DATA_POLICY.md`](docs/TEST_DATA_POLICY.md) | What a fixture may contain, why nothing already published is deleted, and what the gate does not cover |
@@ -530,11 +516,6 @@ page you can show is wrong, and security findings are genuinely wanted: email th
 ---
 
 ## Under the hood
-
-Everything below is for someone reading the code: how Applied is built, how to run it, and where
-each number above comes from. The design write-ups it summarises live in the
-[System Card](https://getapplied.vercel.app/system-card) and in [`docs/`](docs/), which are the
-places to go for depth — this section is a map, not the territory.
 
 The setup and deployment instructions here are the maintainer's, and are published so the claims
 above can be traced to something runnable. They are not an offer of a licence: running your own
